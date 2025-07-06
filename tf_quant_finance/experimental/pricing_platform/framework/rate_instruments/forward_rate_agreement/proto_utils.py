@@ -15,7 +15,7 @@
 
 from typing import Any, List, Dict, Tuple
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance.experimental.pricing_platform.framework import utils
 from tf_quant_finance.experimental.pricing_platform.framework.core import business_days

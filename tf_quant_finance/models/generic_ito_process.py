@@ -17,7 +17,7 @@ Uses Euler scheme for sampling and ADI scheme for solving the associated
 Feynman-Kac equation.
 """
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance.math.pde import fd_solvers
 from tf_quant_finance.models import euler_sampling

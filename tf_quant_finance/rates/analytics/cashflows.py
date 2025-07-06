@@ -13,7 +13,7 @@
 # limitations under the License.
 """Collection of functions to compute properties of cashflows."""
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 def present_value(cashflows,

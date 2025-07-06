@@ -16,7 +16,7 @@
 
 from typing import Callable, Union
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance import types
 from tf_quant_finance.models.hull_white import vector_hull_white
@@ -56,7 +56,7 @@ class HullWhiteModel1F(vector_hull_white.VectorHullWhiteModel):
 
   ```python
   import numpy as np
-  import tensorflow.compat.v2 as tf
+  import tensorflow as tf
   import tf_quant_finance as tff
 
   dtype = tf.float64

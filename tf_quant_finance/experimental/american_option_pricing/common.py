@@ -1,6 +1,6 @@
 """Helper functions for calculating American option prices."""
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 from tensorflow_probability.python.internal import dtype_util
 
 from tf_quant_finance import types

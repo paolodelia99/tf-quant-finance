@@ -17,9 +17,9 @@ syntax = "proto3";
 
 package tf_quant_finance.experimental.pricing_platform.instrument_protos;
 
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/date.proto";
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/metadata.proto";
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/interest_rate_swap.proto";
+import "date.proto";
+import "metadata.proto";
+import "interest_rate_swap.proto";
 
 // Swaption proto
 message Swaption {

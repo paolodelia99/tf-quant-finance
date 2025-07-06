@@ -54,7 +54,7 @@ sigma  controls the graph smoothness at the vertex (ATM)
 
 ```python
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 import tf_quant_finance as tff
 
 svi_parameters = np.array([-0.1825, 0.3306, -0.0988, 0.0368, 0.6011])

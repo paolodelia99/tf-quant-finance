@@ -15,7 +15,7 @@
 from typing import Any, Callable, List, Union
 
 import dataclasses
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance.experimental.pricing_platform.framework.core import rate_indices
 from tf_quant_finance.experimental.pricing_platform.framework.core import types

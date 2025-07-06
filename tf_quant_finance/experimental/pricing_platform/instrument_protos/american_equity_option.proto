@@ -17,11 +17,11 @@ syntax = "proto3";
 
 package tf_quant_finance.experimental.pricing_platform.instrument_protos;
 
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/business_days.proto";
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/currencies.proto";
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/date.proto";
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/decimal.proto";
-import "tf_quant_finance/experimental/pricing_platform/instrument_protos/metadata.proto";
+import "business_days.proto";
+import "currencies.proto";
+import "date.proto";
+import "decimal.proto";
+import "metadata.proto";
 
 
 // Interest rate swap proto

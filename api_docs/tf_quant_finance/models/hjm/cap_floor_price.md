@@ -72,7 +72,7 @@ The example shows how value a batch containing spot starting 1-year and
 
 ````python
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 import tf_quant_finance as tff
 
 dtype = tf.float64

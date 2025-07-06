@@ -14,7 +14,7 @@
 
 """Fixed rate bond."""
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 from tf_quant_finance import datetime as dates
 from tf_quant_finance.experimental.instruments import cashflow_stream as cs
 

@@ -15,7 +15,7 @@
 """Implementation of the regression MC algorithm of Longstaff and Schwartz."""
 
 import collections
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 LsmLoopVars = collections.namedtuple(

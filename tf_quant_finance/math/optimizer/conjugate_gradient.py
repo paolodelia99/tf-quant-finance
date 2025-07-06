@@ -29,7 +29,7 @@ import collections
 
 from  typing import Callable, Tuple
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tensorflow_probability.python.optimizer import converged_all
 from tensorflow_probability.python.optimizer import linesearch

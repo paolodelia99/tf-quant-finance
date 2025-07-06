@@ -15,7 +15,7 @@
 import collections.abc
 import datetime
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance.datetime import constants
 from tf_quant_finance.datetime import date_utils

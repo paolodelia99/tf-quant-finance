@@ -15,16 +15,57 @@
 """Setup for pip package."""
 
 import datetime
-from os import path
+import os
+import subprocess
 import sys
+from os import path
 
 from setuptools import find_packages
 from setuptools import setup
 from setuptools.dist import Distribution
+from setuptools.command.build_py import build_py
 
 if sys.version_info[0] < 3:
   # Need to load open from io to support encoding arg when using Python 2.
   from io import open  # pylint: disable=redefined-builtin, g-importing-member, g-import-not-at-top
+
+
+class CompileProtos(build_py):
+    """Custom build command to compile protocol buffers."""
+    
+    def run(self):
+        # Compile proto files before building
+        self.compile_protos()
+        super().run()
+    
+    def compile_protos(self):
+        """Compile all .proto files to Python."""
+        proto_dir = 'tf_quant_finance/experimental/pricing_platform/instrument_protos'
+        if not os.path.exists(proto_dir):
+            return
+            
+        proto_files = [f for f in os.listdir(proto_dir) if f.endswith('.proto')]
+        if not proto_files:
+            return
+            
+        print("Compiling protocol buffers...")
+        for proto_file in proto_files:
+            proto_path = os.path.join(proto_dir, proto_file)
+            cmd = [
+                'protoc',
+                f'--python_out={proto_dir}',
+                f'--proto_path={proto_dir}',
+                proto_path
+            ]
+            try:
+                subprocess.run(cmd, check=True)
+                print(f"Compiled {proto_file}")
+            except subprocess.CalledProcessError as e:
+                print(f"Warning: Failed to compile {proto_file}: {e}")
+            except FileNotFoundError:
+                print("Warning: protoc not found. Protocol buffers will not be compiled.")
+                print("Install with: apt-get install protobuf-compiler")
+                break
 
 # Read the contents of the README file and set that as the long package
 # description.
@@ -60,6 +101,11 @@ REQUIRED_PACKAGES = [
     'attrs >= 18.2.0', tfp_package, 'numpy >= 1.21', 'protobuf'
 ]
 
+def find_packages_excluding_tests():
+    """Find all packages excluding test files."""
+    packages = find_packages(exclude=["*_test.py"])
+    return [pkg for pkg in packages if not pkg.endswith('_test.py')]
+
 
 class BinaryDistribution(Distribution):
   """This class is needed in order to create OS specific wheels."""
@@ -76,35 +122,35 @@ setup(
     author_email='tf-quant-finance@google.com',
     url='https://github.com/google/tf-quant-finance',
     # Contained modules and scripts.
-    packages=find_packages(),
-    install_requires=REQUIRED_PACKAGES,
+    packages=find_packages_excluding_tests(),
     # Add in any packaged data.
     include_package_data=True,
     zip_safe=False,
     distclass=BinaryDistribution,
+    #cmdclass={'build_py': CompileProtos},
     # PyPI package information.
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Intended Audience :: Developers',
         'Intended Audience :: Education',
         'Intended Audience :: Financial and Insurance Industry',
-        'License :: OSI Approved :: Apache Software License',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
         'Natural Language :: English',
         'Topic :: Scientific/Engineering :: Mathematics',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'Topic :: Software Development :: Libraries',
         'Operating System :: OS Independent',
     ],
-    license='Apache 2.0',
     keywords='tensorflow quantitative finance hpc gpu option pricing',
     package_data={
         'tf_quant_finance': [
-            'third_party/sobol_data/new-joe-kuo.6.21201',
-            'third_party/sobol_data/LICENSE'
+            'third_party/sobol_data/new-joe-kuo-6.21201',
+            'third_party/sobol_data/LICENSE',
+            'experimental/pricing_platform/instrument_protos/*.proto',
         ]
     },
     long_description=long_description,

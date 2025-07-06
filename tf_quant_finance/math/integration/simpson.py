@@ -15,7 +15,7 @@
 """Composite Simpson's algorithm for numeric integration."""
 
 from typing import Callable, Optional
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance import types
 

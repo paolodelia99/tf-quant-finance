@@ -57,7 +57,7 @@ the normal model or the Black model.
 #### Example
 ```python
 import tf_quant_finance as tff
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 equiv_vol = tff.models.sabr.approximations.implied_volatility(
     strikes=np.array([106.0, 11.0]),

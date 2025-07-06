@@ -13,7 +13,7 @@
 # limitations under the License.
 """Utils to manipulate holidays."""
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 # In Gregorian Calendar, 1-Jan-1 was a Monday, hence ordinal 0 corresponds
 # to a Sunday.

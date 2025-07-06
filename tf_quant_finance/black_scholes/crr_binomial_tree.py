@@ -13,7 +13,7 @@
 # limitations under the License.
 """Black Scholes prices of options using CRR binomial trees."""
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 # TODO(b/150447187): Generalize to time dependent parameters.

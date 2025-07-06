@@ -14,7 +14,7 @@
 """Util common functions for brent and newton methods."""
 
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 def default_relative_root_tolerance(dtype):

@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tf-quant-finance"
+dynamic = ["version"]
+description = "High-performance TensorFlow library for quantitative finance."
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICEN[CS]E*"]
+authors = [
+    {name = "Google Inc.", email = "tf-quant-finance@google.com"},
+    {name = "Paolo D'Elia", email = "paolo.delia99@gmail.com"}
+]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Natural Language :: English",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Libraries",
+    "Operating System :: OS Independent",
+]
+keywords = ["tensorflow", "quantitative", "finance", "hpc", "gpu", "option", "pricing"]
+requires-python = ">=3.7"
+dependencies = [
+    "attrs==25.3.0",
+    "tensorflow-probability==0.25.0",
+    "numpy==2.1.3",
+    "protobuf==5.29.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/google/tf-quant-finance"
+Repository = "https://github.com/google/tf-quant-finance"
+
+[tool.setuptools.packages.find]
+include = ["tf_quant_finance*"]
+exclude = ["*_test.py", "**/*_test.py"]
+
+[tool.setuptools.package-data]
+"tf_quant_finance" = [
+    "third_party/sobol_data/*",
+    "experimental/pricing_platform/instrument_protos/*.proto"
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "."
+]
+addopts = [
+    "--import-mode=importlib"
+]

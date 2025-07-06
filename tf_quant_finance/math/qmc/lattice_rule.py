@@ -26,7 +26,7 @@ With this convention, a set of `N` generating vectors with shape `(n)` is
 implemented as a single integer `Tensor` with shape `(N)`.
 """
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance import types
 from tf_quant_finance.math.qmc import utils

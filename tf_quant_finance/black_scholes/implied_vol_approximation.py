@@ -14,7 +14,7 @@
 """Methods to approximate the implied vol of options from market prices."""
 
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 def implied_vol(*,

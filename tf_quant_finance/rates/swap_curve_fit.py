@@ -30,7 +30,7 @@ instruments and the present values computed using the constructed swap curve.
 
 from typing import List, Callable, Any
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance import types
 from tf_quant_finance import utils

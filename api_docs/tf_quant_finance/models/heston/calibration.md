@@ -60,7 +60,7 @@ run price variance, and `volvol` is the volatility of the volatility.
 
 ```python
 import tf_quant_finance as tff
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 dtype = np.float64
 

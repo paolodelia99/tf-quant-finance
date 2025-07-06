@@ -26,7 +26,7 @@ differences with the previous version are:
 """
 
 import collections
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 LsmLoopVars = collections.namedtuple(

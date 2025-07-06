@@ -16,7 +16,7 @@
 import abc
 from typing import Any, Dict, List
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance.experimental.pricing_platform.framework.core import processed_market_data as pmd
 from tf_quant_finance.experimental.pricing_platform.framework.core import types

@@ -1,0 +1,15 @@
+.vscode
+
+venv
+
+__pycache__/
+
+dist
+build
+*.egg-info
+
+bazel-*
+
+# Protos generatered files
+tf_quant_finance/experimental/pricing_platform/instrument_protos/*_pb2.py
+*_pb2.py

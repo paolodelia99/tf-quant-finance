@@ -25,7 +25,7 @@ when we have large arrays.
 from typing import Dict, Callable, Optional
 
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 __all__ = [

@@ -1,1 +1,6 @@
 recursive-include tf_quant_finance/third_party/ *
+recursive-include tf_quant_finance/experimental/pricing_platform/instrument_protos/ *.proto
+include LICENSE
+include README.md
+global-exclude *_test.py
+global-exclude **/*_test.py

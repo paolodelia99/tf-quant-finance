@@ -13,7 +13,7 @@
 # limitations under the License.
 """Piecewise utility functions."""
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 class PiecewiseConstantFunc(object):

@@ -69,7 +69,7 @@ equivalent to specifying n=10.
 #### Examples
 
 ```python
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 import tensorflow_probability as tfp
 
 # Produce the first 1000 members of the Halton sequence in 3 dimensions.

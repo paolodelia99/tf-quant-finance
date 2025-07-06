@@ -14,7 +14,7 @@
 """Factory for HolidayCalendar implementations."""
 
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance.datetime import bounded_holiday_calendar
 from tf_quant_finance.datetime import unbounded_holiday_calendar

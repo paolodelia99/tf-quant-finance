@@ -15,7 +15,7 @@
 
 import numpy as np
 from six.moves import range
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 def uniform_grid(minimums,

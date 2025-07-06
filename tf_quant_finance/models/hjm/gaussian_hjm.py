@@ -15,7 +15,7 @@
 
 from typing import Callable, Union
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance import types
 from tf_quant_finance.math import gradient
@@ -93,7 +93,7 @@ class GaussianHJM(quasi_gaussian_hjm.QuasiGaussianHJM):
 
   ```python
   import numpy as np
-  import tensorflow.compat.v2 as tf
+  import tensorflow as tf
   import tf_quant_finance as tff
 
   dtype = tf.float64

@@ -14,7 +14,7 @@
 
 """Multivariate Geometric Brownian Motion."""
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance import utils as tff_utils
 from tf_quant_finance.math.pde import fd_solvers

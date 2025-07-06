@@ -16,7 +16,7 @@
 
 import functools
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 def fwd_gradient(func_or_y, x, input_gradients=None, use_gradient_tape=False,

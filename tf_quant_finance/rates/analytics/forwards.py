@@ -13,7 +13,7 @@
 # limitations under the License.
 """Collection of functions to compute properties of forwards."""
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance.math import segment_ops
 

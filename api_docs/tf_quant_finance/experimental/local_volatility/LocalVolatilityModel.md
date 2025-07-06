@@ -72,7 +72,7 @@ a flexible framework to model any (arbitrage free) volatility surface.
 
 ```python
 import numpy as np
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 import tf_quant_finance as tff
 
 dtype = tf.float64

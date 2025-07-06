@@ -14,7 +14,7 @@
 """Constant maturity swaps."""
 
 import itertools
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 import tensorflow_probability as tfp
 from tf_quant_finance import black_scholes
 from tf_quant_finance import datetime as dates

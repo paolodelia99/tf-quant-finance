@@ -14,7 +14,7 @@
 """Payoff functions."""
 
 import functools
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 def make_basket_put_payoff(strike_price, dtype=None, name=None):

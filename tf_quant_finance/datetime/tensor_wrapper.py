@@ -14,7 +14,7 @@
 """Base class for Tensor wrappers."""
 
 import abc
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 
 class TensorWrapper(metaclass=abc.ABCMeta):

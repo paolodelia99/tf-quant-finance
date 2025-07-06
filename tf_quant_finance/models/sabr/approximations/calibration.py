@@ -15,7 +15,7 @@
 
 from typing import Callable, Tuple
 
-import tensorflow.compat.v2 as tf
+import tensorflow as tf
 
 from tf_quant_finance import black_scholes
 from tf_quant_finance import types
@@ -109,7 +109,7 @@ def calibration(
 
   ```python
   import tf_quant_finance as tff
-  import tensorflow.compat.v2 as tf
+  import tensorflow as tf
 
   dtype = np.float64
 
