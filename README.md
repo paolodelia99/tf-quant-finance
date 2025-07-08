@@ -1,11 +1,4 @@
-# TF Quant Finance: TensorFlow based Quant Finance Library (ARCHIVED)
-
-> [!IMPORTANT]
-> This library is no longer maintained and has been archived. If you depend on
-> the functionality provided by this library, we suggest to fork it and continue
-> development elsewhere.
-
-[![Build Status](https://storage.googleapis.com/tf-quant-finance-build-result/status.svg?)](https://storage.googleapis.com/tf-quant-finance-build-result/logs.txt)
+# TF Quant Finance: TensorFlow based Quant Finance Library
 
 ## Table of contents
 1. [Introduction](#introduction)
@@ -62,7 +55,7 @@ pip3 install --upgrade tensorflow
 Then run
 
 ```sh
-pip3 install --upgrade tf-quant-finance
+pip3 install --upgrade tf-q-finance
 ```
 
 You maybe also have to use the option ```--user```.
@@ -130,18 +123,12 @@ instructions in the [Installation](#installation) section.
 
 This library has the following dependencies:
 
-1.  Bazel
-2.  Python 3 (Bazel uses Python 3 by default)
-3.  TensorFlow version >= 2.7
-4.  TensorFlow Probability version between v0.11.0 and v0.12.1
-5.  Numpy version 1.21 or higher
+1.  Python 3 (Bazel uses Python 3 by default)
+3.  TensorFlow version >= 2.19
+4.  TensorFlow Probability version >= 0.25.0
+5.  Numpy version 2.1.3
 6.  Attrs
 7.  Dataclasses (not needed if your Python version >= 3.7)
-
-This library requires the
-[Bazel](https://bazel.build/) build system. Please follow the
-[Bazel installation instructions](https://docs.bazel.build/versions/master/install.html)
-for your platform.
 
 
 You can install TensorFlow and related dependencies using the ```pip3 install```
@@ -165,10 +152,10 @@ After you run
 cd tf_quant_finance
 ```
 
-you can execute tests using the ```bazel test``` command. For example,
+you can execute tests using the ```run_tests``` script in the scripts folder. For example,
 
 ```sh
-bazel test tf_quant_finance/math/random_ops/sobol:sobol_test
+source scripts/run_tests.sh
 ```
 
 will run tests in
@@ -186,9 +173,8 @@ The following commands will build custom pip package from source and install it:
 # sudo apt-get install bazel git python python-pip rsync # For Ubuntu.
 git clone https://github.com/google/tf-quant-finance.git
 cd tf-quant-finance
-bazel build :build_pip_pkg
-./bazel-bin/build_pip_pkg artifacts
-pip install --user --upgrade artifacts/*.whl
+source scripts/build_wheel.sh
+pip install --user --upgrade dist/*.whl
 ```
 
 ## Community
@@ -197,13 +183,7 @@ pip install --user --upgrade artifacts/*.whl
 
 2. [TensorFlow Blog](https://blog.tensorflow.org/): Stay up to date on content from the TensorFlow team and best articles from the community.
 
-3. tf-quant-finance@googlegroups.com: Open mailing list for discussion and questions of this library.
-
-4. TensorFlow Probability: This library will leverage methods from [TensorFlow Probability](https://www.tensorflow.org/probability) (TFP).
-
-## Disclaimers
-
-Google does not officially support this product. This library is under active development, and interfaces may change at any time.
+3. TensorFlow Probability: This library will leverage methods from [TensorFlow Probability](https://www.tensorflow.org/probability) (TFP).
 
 ## License
 

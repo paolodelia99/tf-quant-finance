@@ -1,22 +1,9 @@
 #!/usr/bin/env bash
 # Build script for tf-quant-finance using Python build tools
-# This replaces the Bazel-based build process
 
 source "$(dirname "${BASH_SOURCE[0]}")/create_venv.sh"
 
 set -e
-
-function compile_protos() {
-    echo "=== Compiling Protocol Buffers"
-    PROTO_DIR="tf_quant_finance/experimental/pricing_platform/instrument_protos"
-    
-    if [ -d "$PROTO_DIR" ]; then
-        $PYTHON $BASEDIR/scripts/compile_protos.py
-        return $?
-    else
-        return 0
-    fi
-}
 
 function main() {
     DEST_DIR="dist"
@@ -44,17 +31,6 @@ function main() {
     # Clean previous builds
     echo "=== Cleaning previous builds"
     rm -rf build/ dist/ *.egg-info/
-    
-    # Compile protocol buffers
-    set +e
-    compile_protos
-    PY_OUT=$?
-    set -e
-
-    if [ "$PY_OUT" = "1" ]; then
-        echo "Error when producing proto files"
-        exit 1
-    fi
     
     echo "=== Building wheel with python -m build"
     

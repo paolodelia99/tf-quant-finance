@@ -19,18 +19,20 @@ import os
 import subprocess
 import sys
 from os import path
+from pathlib import Path
+from contextlib import chdir
 
 from setuptools import find_packages
 from setuptools import setup
 from setuptools.dist import Distribution
-from setuptools.command.build_py import build_py
+from setuptools.command.build_py import build_py as _build_py
 
 if sys.version_info[0] < 3:
   # Need to load open from io to support encoding arg when using Python 2.
   from io import open  # pylint: disable=redefined-builtin, g-importing-member, g-import-not-at-top
 
 
-class CompileProtos(build_py):
+class CompileProtos(_build_py):
     """Custom build command to compile protocol buffers."""
     
     def run(self):
@@ -40,32 +42,33 @@ class CompileProtos(build_py):
     
     def compile_protos(self):
         """Compile all .proto files to Python."""
-        proto_dir = 'tf_quant_finance/experimental/pricing_platform/instrument_protos'
+        proto_dir = Path("tf_quant_finance/experimental/pricing_platform/instrument_protos")
         if not os.path.exists(proto_dir):
             return
+        
+        with chdir(proto_dir):
+            project_root = Path(".")
+            proto_files = list(project_root.glob("*.proto"))
             
-        proto_files = [f for f in os.listdir(proto_dir) if f.endswith('.proto')]
-        if not proto_files:
-            return
+            if not proto_files:
+                return
             
-        print("Compiling protocol buffers...")
-        for proto_file in proto_files:
-            proto_path = os.path.join(proto_dir, proto_file)
+            print("\033[1m" + "* Compiling protocol buffers..." + "\033[0m")
+
+            all_proto_files = [str(f) for f in proto_files]
+        
             cmd = [
-                'protoc',
-                f'--python_out={proto_dir}',
-                f'--proto_path={proto_dir}',
-                proto_path
-            ]
+                "protoc",
+                f"--python_out={project_root}",
+                f"--proto_path={project_root}",
+            ] + all_proto_files
+
             try:
                 subprocess.run(cmd, check=True)
-                print(f"Compiled {proto_file}")
+                print(f"✓ Compiled all protocol buffer files successfully")
             except subprocess.CalledProcessError as e:
-                print(f"Warning: Failed to compile {proto_file}: {e}")
-            except FileNotFoundError:
-                print("Warning: protoc not found. Protocol buffers will not be compiled.")
-                print("Install with: apt-get install protobuf-compiler")
-                break
+                print(f"✗ Failed to compile protocol buffer files")
+                print(f"  Error: {e.stderr}")
 
 # Read the contents of the README file and set that as the long package
 # description.
@@ -84,22 +87,17 @@ if '--nightly' in sys.argv:
   sys.argv.remove('--nightly')
   project_name = 'tff-nightly'
   release_suffix = datetime.datetime.utcnow().strftime('.dev%Y%m%d')
-  tfp_package = 'tensorflow-probability >= 0.12.1'
 else:
   project_name = 'tf-quant-finance'
   # The suffix should be replaced with 'aN', 'bN', or 'rcN' (note: no dots) for
   # respective alpha releases, beta releases, and release candidates. And it
   # should be cleared, i.e. set to '', for stable releases (c.f. PEP 440).
   release_suffix = '.dev34'
-  tfp_package = 'tensorflow-probability >= 0.12.1'
 
 __version__ = '.'.join([major_version, minor_version, patch_version])
 if release_suffix:
   __version__ += release_suffix
 
-REQUIRED_PACKAGES = [
-    'attrs >= 18.2.0', tfp_package, 'numpy >= 1.21', 'protobuf'
-]
 
 def find_packages_excluding_tests():
     """Find all packages excluding test files."""
@@ -127,7 +125,7 @@ setup(
     include_package_data=True,
     zip_safe=False,
     distclass=BinaryDistribution,
-    #cmdclass={'build_py': CompileProtos},
+    cmdclass={'build_py': CompileProtos},
     # PyPI package information.
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',

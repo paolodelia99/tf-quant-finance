@@ -27,6 +27,8 @@ else
 
     . $VENV_DIR/bin/activate
 
+    #TODO: install proper version of pip, build and setuptools
+    # -m pip install --upgrade pip build wheel setuptools
     pip install -r $BASEDIR/requirements/build.txt
 
 fi

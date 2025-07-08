@@ -1,0 +1,23 @@
+name: Build Python Wheel
+
+on:
+    push:
+        branches: [ "*" ]
+    pull_request:
+        branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run the build process with Docker
+      uses: addnab/docker-run-action@v3
+      with:
+        image: paolodelia99/tf-quant-finance-dev:0
+        options: -v ${{ github.workspace }}:/app/tf-quant-finance
+        shell: bash
+        run: |
+            source scripts/build_wheel.sh

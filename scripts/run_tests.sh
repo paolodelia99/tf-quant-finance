@@ -7,4 +7,4 @@ source "$(dirname "${BASH_SOURCE[0]}")/create_venv.sh"
 tests=("tests/black_scholes" "tests/datetime" "tests/utils")
 
 echo "Running tff tests"
-pytest -v "${tests[@]}"
+pytest -no-header -vv "${tests[@]}"
