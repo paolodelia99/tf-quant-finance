@@ -17,7 +17,7 @@ jobs:
       uses: addnab/docker-run-action@v3
       with:
         image: paolodelia99/tf-quant-finance-dev:0
-        options: -v ${{ github.workspace }}:/app/tf-quant-finance
+        options: -v ${{ github.workspace }}:/workspace
         shell: bash
         run: |
             source scripts/build_wheel.sh
