@@ -1,4 +1,4 @@
-name: Check code format
+name: Run Tests
 
 on:
     push:
