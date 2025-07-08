@@ -3,7 +3,7 @@ requires = ["setuptools>=61.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "tf-quant-finance"
+name = "tf-q-finance"
 dynamic = ["version"]
 description = "High-performance TensorFlow library for quantitative finance."
 readme = "README.md"
@@ -18,11 +18,10 @@ classifiers = [
     "Intended Audience :: Developers",
     "Intended Audience :: Education",
     "Intended Audience :: Financial and Insurance Industry",
-    "Programming Language :: Python :: 3.7",
-    "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Natural Language :: English",
     "Topic :: Scientific/Engineering :: Mathematics",
     "Topic :: Software Development :: Libraries :: Python Modules",
@@ -30,7 +29,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 keywords = ["tensorflow", "quantitative", "finance", "hpc", "gpu", "option", "pricing"]
-requires-python = ">=3.7"
+requires-python = ">=3.9"
 dependencies = [
     "attrs==25.3.0",
     "tensorflow-probability==0.25.0",

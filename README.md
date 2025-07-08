@@ -1,5 +1,7 @@
 # TF Quant Finance: TensorFlow based Quant Finance Library
 
+**Making [TF Quant Finance](https://github.com/google/tf-quant-finance) working again**: since the official repo has not been mantained for year and achieved, the following fork is making this library alive again. Feel free to contribute to the library fixing bugs and implementing new features.
+
 ## Table of contents
 1. [Introduction](#introduction)
 2. [Installation](#installation)
@@ -42,7 +44,7 @@ higher-level components.
 
 The easiest way to get started with the library is via the pip package.
 
-Note that the library requires Python 3.7 and Tensorflow >= 2.7.
+Note that the library requires Python 3.10 and Tensorflow >= 2.18.
 
 First, please install the most recent version of TensorFlow by following
 the [TensorFlow installation instructions](https://tensorflow.org/install).
@@ -173,7 +175,7 @@ The following commands will build custom pip package from source and install it:
 # sudo apt-get install bazel git python python-pip rsync # For Ubuntu.
 git clone https://github.com/google/tf-quant-finance.git
 cd tf-quant-finance
-source scripts/build_wheel.sh
+source scripts/build_wheel.sh # scripts/build_wheel.ps1 if you are on windows
 pip install --user --upgrade dist/*.whl
 ```
 

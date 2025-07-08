@@ -98,10 +98,10 @@ patch_version = '1'
 if '--nightly' in sys.argv:
   # Run `python3 setup.py --nightly ...` to create a nightly build.
   sys.argv.remove('--nightly')
-  project_name = 'tff-nightly'
+  project_name = 'tf-q-finance-nightly'
   release_suffix = datetime.datetime.utcnow().strftime('.dev%Y%m%d')
 else:
-  project_name = 'tf-quant-finance'
+  project_name = 'tf-q-finance'
   # The suffix should be replaced with 'aN', 'bN', or 'rcN' (note: no dots) for
   # respective alpha releases, beta releases, and release candidates. And it
   # should be cleared, i.e. set to '', for stable releases (c.f. PEP 440).
@@ -130,8 +130,8 @@ setup(
     version=__version__,
     description=description,
     author='Google Inc.',
-    author_email='tf-quant-finance@google.com',
-    url='https://github.com/google/tf-quant-finance',
+    author_email='paolo.delia99@gmail.com',
+    url='https://github.com/paolodelia99/tf-quant-finance',
     # Contained modules and scripts.
     packages=find_packages_excluding_tests(),
     # Add in any packaged data.
