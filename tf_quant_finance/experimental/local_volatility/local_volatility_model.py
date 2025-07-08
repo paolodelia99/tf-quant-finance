@@ -94,9 +94,9 @@ def _dupire_local_volatility_prices(
         )
         return c_k_t
 
-    dcdk_fn = lambda x: _option_price(time, x)
-    dcdt_fn = lambda x: _option_price(x, spot_price)
-    d2cdk2_fn = lambda x: math.fwd_gradient(dcdk_fn, x)
+    def dcdk_fn(x): return _option_price(time, x)
+    def dcdt_fn(x): return _option_price(x, spot_price)
+    def d2cdk2_fn(x): return math.fwd_gradient(dcdk_fn, x)
 
     # TODO(b/173568116): Replace gradients of call prices with imp vol gradients.
     numerator = (
@@ -142,11 +142,15 @@ def _dupire_local_volatility_iv(
         tf.math.sqrt(time),
     )
 
-    spot_fn = lambda x: _implied_vol(time, x)
-    time_fn = lambda t: _implied_vol(t, spot_price)
-    dtheta_dt = lambda t: math.fwd_gradient(time_fn, t)
-    dtheta_dspot = lambda x: math.fwd_gradient(spot_fn, x)
-    d2theta_dspot2 = lambda x: math.fwd_gradient(dtheta_dspot, x)
+    def spot_fn(x): return _implied_vol(time, x)
+
+    def time_fn(t): return _implied_vol(t, spot_price)
+
+    def dtheta_dt(t): return math.fwd_gradient(time_fn, t)
+
+    def dtheta_dspot(x): return math.fwd_gradient(spot_fn, x)
+
+    def d2theta_dspot2(x): return math.fwd_gradient(dtheta_dspot, x)
 
     numerator = (
         theta**2
@@ -238,8 +242,9 @@ def _dupire_local_volatility_iv_precomputed(
             spots = tf.transpose(spot_grid)
             # TODO(b/229480163): Batch this.
             return implied_volatility_surface(strike=spots, expiry_times=time)
+        
+        def fn_grad(time): return math.fwd_gradient(wrap_implied_vol, time)
 
-        fn_grad = lambda time: math.fwd_gradient(wrap_implied_vol, time)
         return tf.vectorized_map(fn_grad, tf.transpose(times))
 
     grad_implied_vol_grid = map_times_grad(times_grid)
@@ -903,7 +908,7 @@ def _get_risk_free_rate_from_discount_factor(discount_factor_fn):
     """Returns r(t) given a discount factor function."""
 
     def risk_free_rate_fn(t):
-        logdf = lambda x: -tf.math.log(discount_factor_fn(x))
+        def logdf(x): return -tf.math.log(discount_factor_fn(x))
         return math.fwd_gradient(
             logdf, t, unconnected_gradients=tf.UnconnectedGradients.ZERO
         )

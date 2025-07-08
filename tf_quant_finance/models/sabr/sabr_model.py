@@ -86,8 +86,10 @@ class SabrModel(generic_ito_process.GenericItoProcess):
     ### Example 2. Callable volvol and correlation coefficient.
 
     ```none
-      volvol_fn = lambda t: tf.where(t < 2, 0.5, 1.0)
-      rho_fn = lambda t: tf.where(t < 1, 0., 0.5)
+      def volvol_fn(t):
+          return tf.where(t < 2, 0.5, 1.0)
+      def rho_fn(t):
+          return tf.where(t < 1, 0., 0.5)
 
       process = sabr.SabrModel(
           beta=0.5, volvol=volvol_fn, rho=rho_fn, dtype=tf.float32)
@@ -187,7 +189,8 @@ class SabrModel(generic_ito_process.GenericItoProcess):
         self._ncx2_cdf_truncation = ncx2_cdf_truncation
         self._shift = tf.convert_to_tensor(shift, dtype=self._dtype, name="shift")
 
-        drift_fn = lambda _, x: tf.zeros_like(x)
+        def drift_fn(_, x):
+            return tf.zeros_like(x)
 
         def _vol_fn(t, x):
             """The volatility function for SABR model."""
@@ -444,7 +447,7 @@ class SabrModel(generic_ito_process.GenericItoProcess):
                 clear_after_read=False,
             )
         # Define sampling while_loop body function
-        cond_fn = lambda index, *args: index < tf.size(times)
+        def cond_fn(index, *args): return index < tf.size(times)
 
         # In order to use low-discrepancy random_type we need to generate the
         # sequence of independent random normals upfront. We also precompute random
@@ -555,7 +558,8 @@ class SabrModel(generic_ito_process.GenericItoProcess):
         normal_draws_index,
         num_time_steps,
     ):
-        cond_fn = lambda t, *args: t < end_time
+        def cond_fn(t, *args):
+            return t < end_time
 
         def body_fn(current_time, forward, vol, normal_draws_index):
             """Simulate Sabr process for one time step."""

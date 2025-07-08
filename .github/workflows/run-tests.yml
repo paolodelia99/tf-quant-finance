@@ -1,0 +1,23 @@
+name: Check code format
+
+on:
+    push:
+        branches: [ "*" ]
+    pull_request:
+        branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run the code formatter checks
+      uses: addnab/docker-run-action@v3
+      with:
+        image: paolodelia99/tf-quant-finance-dev:py3.12
+        options: -v ${{ github.workspace }}:/workspace
+        shell: bash
+        run: |
+            source scripts/run_tests.sh

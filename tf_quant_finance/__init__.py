@@ -15,6 +15,24 @@
 
 import sys
 
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
+
+from tf_quant_finance import black_scholes
+from tf_quant_finance import datetime
+
+try:
+    # Ignore experimental in case it has not been added in the build rule
+    from tf_quant_finance import experimental
+except ImportError:
+    pass
+
+from tf_quant_finance import math
+from tf_quant_finance import models
+from tf_quant_finance import rates
+from tf_quant_finance import types
+from tf_quant_finance import utils
 # We need to put some imports inside a function call below, and the function
 # call needs to come before the *actual* imports that populate the
 # tf_quant_finance namespace. Hence, we disable this lint check throughout
@@ -23,7 +41,7 @@ import sys
 # pylint: disable=g-import-not-at-top
 
 # Update this whenever we need to depend on a newer TensorFlow release.
-_REQUIRED_TENSORFLOW_VERSION = "2.3"  # pylint: disable=g-statement-before-imports
+_REQUIRED_TENSORFLOW_VERSION = "2.18"  # pylint: disable=g-statement-before-imports
 
 
 # Ensure Python 3 is used.
@@ -72,24 +90,6 @@ def _ensure_tf_install():  # pylint: disable=g-statement-before-imports
 
 _check_py_version()
 _ensure_tf_install()
-
-from tf_quant_finance import black_scholes
-from tf_quant_finance import datetime
-
-try:
-    # Ignore experimental in case it has not been added in the build rule
-    from tf_quant_finance import experimental
-except ImportError:
-    pass
-
-from tf_quant_finance import math
-from tf_quant_finance import models
-from tf_quant_finance import rates
-from tf_quant_finance import types
-from tf_quant_finance import utils
-from tensorflow.python.util.all_util import (
-    remove_undocumented,
-)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
     "black_scholes",
