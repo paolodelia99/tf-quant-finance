@@ -13,21 +13,49 @@
 # limitations under the License.
 """Instrument protos module."""
 
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import all_instruments_pb2 as instruments
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import american_equity_option_pb2 as american_equity_option
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import business_days_pb2 as business_days
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import currencies_pb2 as currencies
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import date_pb2 as date
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import daycount_conventions_pb2 as daycount_conventions
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import decimal_pb2 as decimal
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import forward_rate_agreement_pb2 as forward_rate_agreement
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import interest_rate_swap_pb2 as interest_rate_swap
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import metadata_pb2 as metadata
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import period_pb2 as period
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import rate_indices_pb2 as rate_indices
-from tf_quant_finance.experimental.pricing_platform.instrument_protos import swaption_pb2 as swaption
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    all_instruments_pb2 as instruments,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    american_equity_option_pb2 as american_equity_option,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    business_days_pb2 as business_days,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    currencies_pb2 as currencies,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    date_pb2 as date,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    daycount_conventions_pb2 as daycount_conventions,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    decimal_pb2 as decimal,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    forward_rate_agreement_pb2 as forward_rate_agreement,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    interest_rate_swap_pb2 as interest_rate_swap,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    metadata_pb2 as metadata,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    period_pb2 as period,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    rate_indices_pb2 as rate_indices,
+)
+from tf_quant_finance.experimental.pricing_platform.instrument_protos import (
+    swaption_pb2 as swaption,
+)
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 
 Instrument = instruments.Instrument
@@ -46,7 +74,6 @@ _allowed_symbols = [
     "period",
     "rate_indices",
     "swaption",
-
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

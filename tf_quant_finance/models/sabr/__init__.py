@@ -16,12 +16,14 @@
 from tf_quant_finance.models.sabr import approximations
 from tf_quant_finance.models.sabr.approximations.calibration import calibration
 from tf_quant_finance.models.sabr.sabr_model import SabrModel
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'approximations',
-    'calibration',
-    'SabrModel',
+    "approximations",
+    "calibration",
+    "SabrModel",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

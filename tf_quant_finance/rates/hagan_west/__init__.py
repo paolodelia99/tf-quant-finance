@@ -16,15 +16,17 @@
 from tf_quant_finance.rates.hagan_west import bond_curve as bond_curve_lib
 from tf_quant_finance.rates.hagan_west import monotone_convex
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 bond_curve = bond_curve_lib.bond_curve
 CurveBuilderResult = bond_curve_lib.CurveBuilderResult
 
 _allowed_symbols = [
-    'bond_curve',
-    'monotone_convex',
-    'CurveBuilderResult',
+    "bond_curve",
+    "monotone_convex",
+    "CurveBuilderResult",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

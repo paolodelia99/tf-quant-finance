@@ -23,30 +23,31 @@ import tensorflow as tf
 
 
 def stateless_random_shuffle(input_tensor, seed, name=None):
-  """Produces stateless random shuffle of the 1st dimension of an input Tensor.
+    """Produces stateless random shuffle of the 1st dimension of an input Tensor.
 
-  This is a stateless version of `tf.random_shuffle`. If run twice with the same
-  seed, produces the same result.
+    This is a stateless version of `tf.random_shuffle`. If run twice with the same
+    seed, produces the same result.
 
-  Example
-  ```python
-  identity_shuffle = tf.range(100)
-  random_shuffle = stateless_random_shuffle(identity_shuffle, seed=(42, 2))
-  ```
+    Example
+    ```python
+    identity_shuffle = tf.range(100)
+    random_shuffle = stateless_random_shuffle(identity_shuffle, seed=(42, 2))
+    ```
 
-  Args:
-    input_tensor: float32, float64, int32 or int64 1-D Tensor.
-    seed: int32 or int64 Tensor of shape [2].
-    name: Python `str` name prefixed to ops created by this function.
+    Args:
+      input_tensor: float32, float64, int32 or int64 1-D Tensor.
+      seed: int32 or int64 Tensor of shape [2].
+      name: Python `str` name prefixed to ops created by this function.
 
-  Returns:
-    A Tensor of the same shape and dtype as `input_tensor`.
-  """
-  with tf.compat.v1.name_scope(name,
-                               default_name='stateless_random_shuffle',
-                               values=[input_tensor, seed]):
-    input_tensor = tf.convert_to_tensor(input_tensor, name='input_tensor')
-    seed = tf.convert_to_tensor(seed, name='random_seed')
-    uniforms = tf.random.stateless_uniform(
-        shape=[tf.shape(input_tensor)[0]], seed=seed, dtype=tf.float64)
-  return tf.gather(input_tensor, tf.argsort(uniforms, stable=True, axis=0))
+    Returns:
+      A Tensor of the same shape and dtype as `input_tensor`.
+    """
+    with tf.compat.v1.name_scope(
+        name, default_name="stateless_random_shuffle", values=[input_tensor, seed]
+    ):
+        input_tensor = tf.convert_to_tensor(input_tensor, name="input_tensor")
+        seed = tf.convert_to_tensor(seed, name="random_seed")
+        uniforms = tf.random.stateless_uniform(
+            shape=[tf.shape(input_tensor)[0]], seed=seed, dtype=tf.float64
+        )
+    return tf.gather(input_tensor, tf.argsort(uniforms, stable=True, axis=0))

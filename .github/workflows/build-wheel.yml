@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+        matrix:
+            python-version: ["3.10", "3.12", "3.13"]
 
     steps:
     - uses: actions/checkout@v4
@@ -16,7 +19,7 @@ jobs:
     - name: Run the build process with Docker
       uses: addnab/docker-run-action@v3
       with:
-        image: paolodelia99/tf-quant-finance-dev:0
+        image: paolodelia99/tf-quant-finance-dev:py${{ matrix.python-version }}
         options: -v ${{ github.workspace }}:/workspace
         shell: bash
         run: |

@@ -20,11 +20,13 @@ with generic_ito_process.py. Then the "legacy" package should be removed.
 
 from tf_quant_finance.models.legacy.brownian_motion import BrownianMotion
 from tf_quant_finance.models.legacy.ito_process import ItoProcess
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'ItoProcess',
-    'BrownianMotion',
+    "ItoProcess",
+    "BrownianMotion",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

@@ -17,9 +17,9 @@ import enum
 
 
 class InterpolationMethod(enum.Enum):
-  LINEAR = "LINEAR"
-  CUBIC = "CUBIC"
-  CONSTANT_FORWARD = "CONSTANT_FORWARD"
+    LINEAR = "LINEAR"
+    CUBIC = "CUBIC"
+    CONSTANT_FORWARD = "CONSTANT_FORWARD"
 
 
 __all__ = ["InterpolationMethod"]

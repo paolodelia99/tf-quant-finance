@@ -18,12 +18,13 @@ import enum
 
 @enum.unique
 class ValuationMethod(enum.Enum):
-  """Valuation methods.
+    """Valuation methods.
 
-  * `ANALYTIC`: Analytic valuation.
-  * `MONTE_CARLO`: Valuation using Monte carlo simulations.
-  * `FINITE_DIFFERENCE`: Valuation using finite difference methods/PDEs.
-  """
-  ANALYTIC = 1
-  MONTE_CARLO = 2
-  FINITE_DIFFERENCE = 3
+    * `ANALYTIC`: Analytic valuation.
+    * `MONTE_CARLO`: Valuation using Monte carlo simulations.
+    * `FINITE_DIFFERENCE`: Valuation using finite difference methods/PDEs.
+    """
+
+    ANALYTIC = 1
+    MONTE_CARLO = 2
+    FINITE_DIFFERENCE = 3

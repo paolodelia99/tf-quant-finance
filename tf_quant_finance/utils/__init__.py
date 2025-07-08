@@ -20,15 +20,17 @@ from tf_quant_finance.utils.shape_utils import common_shape
 from tf_quant_finance.utils.shape_utils import get_shape
 from tf_quant_finance.utils.tf_functions import iterate_nested
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'dataclass',
-    'broadcast_common_batch_shape',
-    'broadcast_tensors',
-    'common_shape',
-    'get_shape',
-    'iterate_nested'
+    "dataclass",
+    "broadcast_common_batch_shape",
+    "broadcast_tensors",
+    "common_shape",
+    "get_shape",
+    "iterate_nested",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

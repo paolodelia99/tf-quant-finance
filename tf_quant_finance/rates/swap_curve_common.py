@@ -17,34 +17,33 @@ from tf_quant_finance import types
 from tf_quant_finance import utils
 
 
-__all__ = [
-    'SwapCurveBuilderResult'
-]
+__all__ = ["SwapCurveBuilderResult"]
 
 
 @utils.dataclass
 class SwapCurveBuilderResult:
-  """Swap curve calibration results.
+    """Swap curve calibration results.
 
-  Attributes:
-    times: Rank 1 real `Tensor`. Times for the computed rates.
-    rates: Rank 1 `Tensor` of the same dtype as `times`. The inferred zero
-      rates.
-    discount_factors: Rank 1 `Tensor` of the same dtype as `times`. The inferred
-      discount factors.
-    initial_rates: Rank 1 `Tensor` of the same dtype as `times`. The initial
-      guess for the rates.
-    converged: Scalar boolean `Tensor`. Whether the procedure converged.
-    failed: Scalar boolean `Tensor`. Whether the procedure failed.
-    iterations: Scalar int32 `Tensor`. Number of iterations performed.
-    objective_value: Scalar real `Tensor`. The objective function at the optimal
-      soultion.
-  """
-  times: types.RealTensor
-  rates: types.RealTensor
-  discount_factors: types.RealTensor
-  initial_rates: types.RealTensor
-  converged: types.BoolTensor
-  failed: types.BoolTensor
-  iterations: types.IntTensor
-  objective_value: types.RealTensor
+    Attributes:
+      times: Rank 1 real `Tensor`. Times for the computed rates.
+      rates: Rank 1 `Tensor` of the same dtype as `times`. The inferred zero
+        rates.
+      discount_factors: Rank 1 `Tensor` of the same dtype as `times`. The inferred
+        discount factors.
+      initial_rates: Rank 1 `Tensor` of the same dtype as `times`. The initial
+        guess for the rates.
+      converged: Scalar boolean `Tensor`. Whether the procedure converged.
+      failed: Scalar boolean `Tensor`. Whether the procedure failed.
+      iterations: Scalar int32 `Tensor`. Number of iterations performed.
+      objective_value: Scalar real `Tensor`. The objective function at the optimal
+        soultion.
+    """
+
+    times: types.RealTensor
+    rates: types.RealTensor
+    discount_factors: types.RealTensor
+    initial_rates: types.RealTensor
+    converged: types.BoolTensor
+    failed: types.BoolTensor
+    iterations: types.IntTensor
+    objective_value: types.RealTensor

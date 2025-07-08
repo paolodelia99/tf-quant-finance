@@ -21,7 +21,9 @@ from tf_quant_finance import datetime as datetime_tff
 
 from tf_quant_finance.experimental.pricing_platform.framework.core import business_days
 from tf_quant_finance.experimental.pricing_platform.framework.core import currencies
-from tf_quant_finance.experimental.pricing_platform.framework.core import daycount_conventions
+from tf_quant_finance.experimental.pricing_platform.framework.core import (
+    daycount_conventions,
+)
 from tf_quant_finance.experimental.pricing_platform.instrument_protos import period_pb2
 
 
@@ -46,17 +48,18 @@ GraphDef = tf.compat.v1.GraphDef
 ProtobufBaseType = period_pb2.__class__.__base__
 
 
-__all__ = ["DayCountConventionsProtoType",
-           "CurrencyProtoType",
-           "BankHolidaysProtoType",
-           "BusinessDayConventionProtoType",
-           "Period",
-           "Dtype",
-           "BoolTensor",
-           "IntTensor",
-           "FloatTensor",
-           "StringTensor",
-           "DateTensor",
-           "GraphDef",
-           "ProtobufBaseType"]
-
+__all__ = [
+    "DayCountConventionsProtoType",
+    "CurrencyProtoType",
+    "BankHolidaysProtoType",
+    "BusinessDayConventionProtoType",
+    "Period",
+    "Dtype",
+    "BoolTensor",
+    "IntTensor",
+    "FloatTensor",
+    "StringTensor",
+    "DateTensor",
+    "GraphDef",
+    "ProtobufBaseType",
+]

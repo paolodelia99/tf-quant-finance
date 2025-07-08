@@ -23,18 +23,20 @@ from tf_quant_finance.math.qmc.lattice_rule import random_scrambling_vectors
 from tf_quant_finance.math.qmc.sobol import sobol_generating_matrices
 from tf_quant_finance.math.qmc.sobol import sobol_sample
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'digital_net_sample',
-    'lattice_rule_sample',
-    'random_digital_shift',
-    'random_scrambling_matrices',
-    'random_scrambling_vectors',
-    'scramble_generating_matrices',
-    'sobol_generating_matrices',
-    'sobol_sample',
-    'utils',
+    "digital_net_sample",
+    "lattice_rule_sample",
+    "random_digital_shift",
+    "random_scrambling_matrices",
+    "random_scrambling_vectors",
+    "scramble_generating_matrices",
+    "sobol_generating_matrices",
+    "sobol_sample",
+    "utils",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

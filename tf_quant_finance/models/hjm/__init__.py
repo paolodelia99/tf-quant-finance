@@ -20,17 +20,19 @@ from tf_quant_finance.models.hjm.gaussian_hjm import GaussianHJM
 from tf_quant_finance.models.hjm.quasi_gaussian_hjm import QuasiGaussianHJM
 from tf_quant_finance.models.hjm.swaption_pricing import price as swaption_price
 from tf_quant_finance.models.hjm.zero_coupon_bond_option import bond_option_price
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 # pyformat: disable
 _allowed_symbols = [
-    'CalibrationResult',
-    'GaussianHJM',
-    'QuasiGaussianHJM',
-    'bond_option_price',
-    'cap_floor_price',
-    'swaption_price',
-    'calibration_from_swaptions'
+    "CalibrationResult",
+    "GaussianHJM",
+    "QuasiGaussianHJM",
+    "bond_option_price",
+    "cap_floor_price",
+    "swaption_price",
+    "calibration_from_swaptions",
 ]
 # pyformat: enable
 

@@ -16,10 +16,12 @@
 
 from tf_quant_finance.experimental.finite_difference import methods
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'methods',
+    "methods",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

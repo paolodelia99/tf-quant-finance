@@ -13,14 +13,24 @@
 # limitations under the License.
 """Market data module."""
 
-from tf_quant_finance.experimental.pricing_platform.framework.market_data import market_data_config as config
-from tf_quant_finance.experimental.pricing_platform.framework.market_data import rate_curve
+from tf_quant_finance.experimental.pricing_platform.framework.market_data import (
+    market_data_config as config,
+)
+from tf_quant_finance.experimental.pricing_platform.framework.market_data import (
+    rate_curve,
+)
 from tf_quant_finance.experimental.pricing_platform.framework.market_data import utils
-from tf_quant_finance.experimental.pricing_platform.framework.market_data import volatility_surface
-from tf_quant_finance.experimental.pricing_platform.framework.market_data.market_data_impl import MarketDataDict
+from tf_quant_finance.experimental.pricing_platform.framework.market_data import (
+    volatility_surface,
+)
+from tf_quant_finance.experimental.pricing_platform.framework.market_data.market_data_impl import (
+    MarketDataDict,
+)
 
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
     "config",

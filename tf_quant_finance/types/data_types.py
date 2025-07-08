@@ -19,8 +19,14 @@ import tensorflow as tf
 
 from tf_quant_finance.datetime.date_tensor import DateTensor as TFFDateTensor
 
-__all__ = ['BoolTensor', 'IntTensor', 'RealTensor',
-           'ComplexTensor', 'StringTensor', 'DateTensor']
+__all__ = [
+    "BoolTensor",
+    "IntTensor",
+    "RealTensor",
+    "ComplexTensor",
+    "StringTensor",
+    "DateTensor",
+]
 
 # A type that represents a boolean `Tensor`
 BoolTensor = tf.types.experimental.TensorLike

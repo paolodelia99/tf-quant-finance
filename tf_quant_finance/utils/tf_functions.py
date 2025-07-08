@@ -26,52 +26,51 @@ LeafType = Any
 
 # A nested dictionary with string keys and dictionary or dataclass values which
 # will also be traversed.
-NestedDict = Dict[str, Union[Any, DataClassType, 'NestedDict']]
+NestedDict = Dict[str, Union[Any, DataClassType, "NestedDict"]]
 
 # Ordered collections of keys starting from the outermost key to the innermost.
 KeyList = List[str]
 
 
 def iterate_nested(
-    nd: NestedDict,
-    previous_keys: Optional[KeyList] = None
+    nd: NestedDict, previous_keys: Optional[KeyList] = None
 ) -> Iterator[Tuple[KeyList, LeafType]]:
-  """Creates an iterator over every leaf value in depth first order.
+    """Creates an iterator over every leaf value in depth first order.
 
-  Iterates over a nested dictionary in depth first order. The order in which
-  the peer keys are traversed is not guaranteed (same as for the keys of a
-  dictionary).
+    Iterates over a nested dictionary in depth first order. The order in which
+    the peer keys are traversed is not guaranteed (same as for the keys of a
+    dictionary).
 
-  ```Example
-  nested_dict = {'a': 1, 'b': [2, 3, 4], 'c': {'d': 8}}
-  for k, v in iterate_nested(nested_dict):
-    print('_'.join(k), v)
-  # Prints out:
-  # a: 1
-  # b: [2, 3, 4]
-  # c_d: 8
-  ```
+    ```Example
+    nested_dict = {'a': 1, 'b': [2, 3, 4], 'c': {'d': 8}}
+    for k, v in iterate_nested(nested_dict):
+      print('_'.join(k), v)
+    # Prints out:
+    # a: 1
+    # b: [2, 3, 4]
+    # c_d: 8
+    ```
 
-  Args:
-    nd: The dictionary to be traversed.
-    previous_keys: If supplied, the computed key list will be a join of the
-      previous_keys and the current keys.
+    Args:
+      nd: The dictionary to be traversed.
+      previous_keys: If supplied, the computed key list will be a join of the
+        previous_keys and the current keys.
 
-  Yields:
-    A tuple of the key path and the value for each leaf node.
-  """
-  if previous_keys is None:
-    previous_keys = []
-  for k, v in nd.items():
-    keys = previous_keys + [k]
-    if not _is_nested(v):
-      yield keys, v
-    else:  # It is nested.
-      as_dict = dataclasses.asdict(v) if dataclasses.is_dataclass(v) else v
-      for val in iterate_nested(as_dict, keys):
-        yield val
+    Yields:
+      A tuple of the key path and the value for each leaf node.
+    """
+    if previous_keys is None:
+        previous_keys = []
+    for k, v in nd.items():
+        keys = previous_keys + [k]
+        if not _is_nested(v):
+            yield keys, v
+        else:  # It is nested.
+            as_dict = dataclasses.asdict(v) if dataclasses.is_dataclass(v) else v
+            for val in iterate_nested(as_dict, keys):
+                yield val
 
 
 def _is_nested(x: Any) -> bool:
-  """Returns whether a value is nested."""
-  return isinstance(x, dict) or dataclasses.is_dataclass(x)
+    """Returns whether a value is nested."""
+    return isinstance(x, dict) or dataclasses.is_dataclass(x)

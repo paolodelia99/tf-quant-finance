@@ -15,10 +15,12 @@
 
 from tf_quant_finance.models.cir.cir_model import CirModel
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'CirModel',
+    "CirModel",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

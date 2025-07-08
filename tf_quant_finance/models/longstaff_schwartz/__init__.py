@@ -16,9 +16,13 @@
 
 from tf_quant_finance.models.longstaff_schwartz.lsm import least_square_mc
 from tf_quant_finance.models.longstaff_schwartz.lsm import make_polynomial_basis
-from tf_quant_finance.models.longstaff_schwartz.payoff_utils import make_basket_put_payoff
+from tf_quant_finance.models.longstaff_schwartz.payoff_utils import (
+    make_basket_put_payoff,
+)
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
     "least_square_mc",

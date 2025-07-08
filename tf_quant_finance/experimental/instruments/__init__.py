@@ -25,7 +25,9 @@ from tf_quant_finance.experimental.instruments import overnight_index_linked_fut
 from tf_quant_finance.experimental.instruments import rate_curve
 from tf_quant_finance.experimental.instruments import rates_common
 from tf_quant_finance.experimental.instruments import swaption
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 Bond = bond.Bond
 CapAndFloor = cap_floor.CapAndFloor
@@ -50,27 +52,27 @@ InterestRateModelType = rates_common.InterestRateModelType
 ratecurve_from_discounting_function = rate_curve.ratecurve_from_discounting_function
 
 _allowed_symbols = [
-    'Bond',
-    'CapAndFloor',
-    'CMSCashflowStream',
-    'CMSCouponSpecs',
-    'CMSSwap',
-    'EurodollarFutures',
-    'FloatingRateNote',
-    'ForwardRateAgreement',
-    'OvernightIndexLinkedFutures',
-    'RateCurve',
-    'Swaption',
-    'InterestRateMarket',
-    'InterestRateModelType',
-    'DayCountConvention',
-    'FixedCashflowStream',
-    'FloatingCashflowStream',
-    'InterestRateSwap',
-    'FixedCouponSpecs',
-    'FloatCouponSpecs',
-    'AverageType',
-    'ratecurve_from_discounting_function',
+    "Bond",
+    "CapAndFloor",
+    "CMSCashflowStream",
+    "CMSCouponSpecs",
+    "CMSSwap",
+    "EurodollarFutures",
+    "FloatingRateNote",
+    "ForwardRateAgreement",
+    "OvernightIndexLinkedFutures",
+    "RateCurve",
+    "Swaption",
+    "InterestRateMarket",
+    "InterestRateModelType",
+    "DayCountConvention",
+    "FixedCashflowStream",
+    "FloatingCashflowStream",
+    "InterestRateSwap",
+    "FixedCouponSpecs",
+    "FloatCouponSpecs",
+    "AverageType",
+    "ratecurve_from_discounting_function",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

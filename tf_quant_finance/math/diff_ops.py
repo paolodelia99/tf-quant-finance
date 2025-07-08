@@ -20,69 +20,69 @@ import tensorflow as tf
 # TODO(b/136354274): Move this function to a math library and provide a more
 # efficient C++ kernel.
 def diff(x, order=1, exclusive=False, axis=-1, dtype=None, name=None):
-  """Computes the difference between elements of an array at a regular interval.
+    """Computes the difference between elements of an array at a regular interval.
 
-  For a difference along the final axis, if exclusive is True, then computes:
+    For a difference along the final axis, if exclusive is True, then computes:
 
-  ```
-    result[..., i] = x[..., i+order] - x[..., i] for i < size(x) - order
+    ```
+      result[..., i] = x[..., i+order] - x[..., i] for i < size(x) - order
 
-  ```
+    ```
 
-  This is the same as doing `x[..., order:] - x[..., :-order]`. Note that in
-  this case the result `Tensor` is smaller in size than the input `Tensor`.
+    This is the same as doing `x[..., order:] - x[..., :-order]`. Note that in
+    this case the result `Tensor` is smaller in size than the input `Tensor`.
 
-  If exclusive is False, then computes:
+    If exclusive is False, then computes:
 
-  ```
-    result[..., i] = x[..., i] - x[..., i-order] for i >= order
-    result[..., i] = x[..., i]  for 0 <= i < order
+    ```
+      result[..., i] = x[..., i] - x[..., i-order] for i >= order
+      result[..., i] = x[..., i]  for 0 <= i < order
 
-  ```
+    ```
 
-  #### Example
+    #### Example
 
-  ```python
-    x = tf.constant([1, 2, 3, 4, 5])
-    dx = diff(x, order=1, exclusive=False)  # Returns [1, 1, 1, 1, 1]
-    dx1 = diff(x, order=1, exclusive=True)  # Returns [1, 1, 1, 1]
-    dx2 = diff(x, order=2, exclusive=False)  # Returns [1, 2, 2, 2, 2]
-  ```
+    ```python
+      x = tf.constant([1, 2, 3, 4, 5])
+      dx = diff(x, order=1, exclusive=False)  # Returns [1, 1, 1, 1, 1]
+      dx1 = diff(x, order=1, exclusive=True)  # Returns [1, 1, 1, 1]
+      dx2 = diff(x, order=2, exclusive=False)  # Returns [1, 2, 2, 2, 2]
+    ```
 
-  Args:
-    x: A `Tensor` of shape `batch_shape + [n]` and of any dtype for which
-      arithmetic operations are permitted.
-    order: Positive Python int. The order of the difference to compute. `order =
-      1` corresponds to the difference between successive elements.
-      Default value: 1
-    exclusive: Python bool. See description above.
-      Default value: False
-    axis: Python int. The axis of `x` along which to difference.
-      Default value: -1 (the final axis).
-    dtype: Optional `tf.DType`. If supplied, the dtype for `x` to use when
-      converting to `Tensor`.
-      Default value: None which maps to the default dtype inferred by TF.
-    name: Python `str` name prefixed to Ops created by this class.
-      Default value: None which is mapped to the default name 'diff'.
+    Args:
+      x: A `Tensor` of shape `batch_shape + [n]` and of any dtype for which
+        arithmetic operations are permitted.
+      order: Positive Python int. The order of the difference to compute. `order =
+        1` corresponds to the difference between successive elements.
+        Default value: 1
+      exclusive: Python bool. See description above.
+        Default value: False
+      axis: Python int. The axis of `x` along which to difference.
+        Default value: -1 (the final axis).
+      dtype: Optional `tf.DType`. If supplied, the dtype for `x` to use when
+        converting to `Tensor`.
+        Default value: None which maps to the default dtype inferred by TF.
+      name: Python `str` name prefixed to Ops created by this class.
+        Default value: None which is mapped to the default name 'diff'.
 
-  Returns:
-    diffs: A `Tensor` of the same dtype as `x`. If `exclusive` is True,
-      then the shape is `batch_shape + [n-min(order, n)]`, otherwise it is
-      `batch_shape + [n]`. The final dimension of which contains the differences
-      of the requested order.
-  """
-  with tf.name_scope(name or 'diff'):
-    x = tf.convert_to_tensor(x, dtype=dtype)
+    Returns:
+      diffs: A `Tensor` of the same dtype as `x`. If `exclusive` is True,
+        then the shape is `batch_shape + [n-min(order, n)]`, otherwise it is
+        `batch_shape + [n]`. The final dimension of which contains the differences
+        of the requested order.
+    """
+    with tf.name_scope(name or "diff"):
+        x = tf.convert_to_tensor(x, dtype=dtype)
 
-    slices = x.shape.rank * [slice(None)]
-    slices[axis] = slice(None, -order)
-    x0 = x[slices]
-    slices[axis] = slice(order, None)
-    x1 = x[slices]
-    exclusive_diff = x1 - x0
+        slices = x.shape.rank * [slice(None)]
+        slices[axis] = slice(None, -order)
+        x0 = x[slices]
+        slices[axis] = slice(order, None)
+        x1 = x[slices]
+        exclusive_diff = x1 - x0
 
-    if exclusive:
-      return exclusive_diff
+        if exclusive:
+            return exclusive_diff
 
-    slices[axis] = slice(None, order)
-    return tf.concat([x[slices], exclusive_diff], axis=axis)
+        slices[axis] = slice(None, order)
+        return tf.concat([x[slices], exclusive_diff], axis=axis)

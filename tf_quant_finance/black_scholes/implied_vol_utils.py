@@ -18,10 +18,11 @@ import enum
 
 @enum.unique
 class UnderlyingDistribution(enum.Enum):
-  """Underying's distribution.
+    """Underying's distribution.
 
-  * `LOG_NORMAL`: Lognormal distribution for the standard Black-Scholes models.
-  * `NORMAL`: Normal distribution used in Bachelier model.
-  """
-  LOG_NORMAL = 1
-  NORMAL = 2
+    * `LOG_NORMAL`: Lognormal distribution for the standard Black-Scholes models.
+    * `NORMAL`: Normal distribution used in Bachelier model.
+    """
+
+    LOG_NORMAL = 1
+    NORMAL = 2

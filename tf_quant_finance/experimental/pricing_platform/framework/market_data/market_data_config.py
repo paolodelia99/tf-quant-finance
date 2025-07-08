@@ -31,8 +31,12 @@ from typing import List, Union
 
 import dataclasses
 
-from tf_quant_finance.experimental.pricing_platform.framework.core import daycount_conventions
-from tf_quant_finance.experimental.pricing_platform.framework.core import interpolation_method
+from tf_quant_finance.experimental.pricing_platform.framework.core import (
+    daycount_conventions,
+)
+from tf_quant_finance.experimental.pricing_platform.framework.core import (
+    interpolation_method,
+)
 from tf_quant_finance.experimental.pricing_platform.framework.core import types
 
 _DayCountConventions = daycount_conventions.DayCountConventions
@@ -44,29 +48,27 @@ _DayCountConventionsProtoType = types.DayCountConventionsProtoType
 
 
 class RateBootstrapOption(enum.Enum):
-  FROM_CSV = "FROM_CSV"
-  FROM_JSON = "FROM_JSON"
-  FROM_BQ = "FROM_BQ"  # From BigQuery
-  BOOTSTRAP = "BOOTSTRAP"
+    FROM_CSV = "FROM_CSV"
+    FROM_JSON = "FROM_JSON"
+    FROM_BQ = "FROM_BQ"  # From BigQuery
+    BOOTSTRAP = "BOOTSTRAP"
 
 
 class RateVolBootstrapOption(enum.Enum):
-  FROM_CSV = "FROM_CSV"
-  FROM_JSON = "FROM_JSON"
-  FROM_BQ = "FROM_BQ"  # From BigQuery
-  BOOTSTRAP = "BOOTSTRAP"
+    FROM_CSV = "FROM_CSV"
+    FROM_JSON = "FROM_JSON"
+    FROM_BQ = "FROM_BQ"  # From BigQuery
+    BOOTSTRAP = "BOOTSTRAP"
 
 
 @dataclasses.dataclass
 class RateConfig:
-  file_id: Union[str, None] = None
-  rate_bootstrap_option: Union[RateBootstrapOption, None] = None
-  bootstrap_instrumetns: Union[List[str], None] = None
-  interpolation_method: _InterpolationMethod = _InterpolationMethod.CUBIC
-  interpolate_rates: bool = True
-  daycount_convention: _DayCountConventionsProtoType = _DayCountConventions.ACTUAL_365
+    file_id: Union[str, None] = None
+    rate_bootstrap_option: Union[RateBootstrapOption, None] = None
+    bootstrap_instrumetns: Union[List[str], None] = None
+    interpolation_method: _InterpolationMethod = _InterpolationMethod.CUBIC
+    interpolate_rates: bool = True
+    daycount_convention: _DayCountConventionsProtoType = _DayCountConventions.ACTUAL_365
 
 
-__all__ = ["RateBootstrapOption",
-           "RateVolBootstrapOption",
-           "RateConfig"]
+__all__ = ["RateBootstrapOption", "RateVolBootstrapOption", "RateConfig"]

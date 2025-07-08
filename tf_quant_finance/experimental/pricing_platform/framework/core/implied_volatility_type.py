@@ -17,8 +17,8 @@ import enum
 
 
 class ImpliedVolatilityType(enum.Enum):
-  SWAPTION_NORMAL = 1
-  SWAPTION_LOGNORMAL = 2
+    SWAPTION_NORMAL = 1
+    SWAPTION_LOGNORMAL = 2
 
 
 __all__ = ["ImpliedVolatilityType"]

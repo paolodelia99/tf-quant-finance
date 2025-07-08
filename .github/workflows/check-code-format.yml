@@ -1,0 +1,23 @@
+name: Build Python Wheel
+
+on:
+    push:
+        branches: [ "*" ]
+    pull_request:
+        branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Run the build process with Docker
+      uses: addnab/docker-run-action@v3
+      with:
+        image: paolodelia99/tf-quant-finance-dev:py3.12
+        options: -v ${{ github.workspace }}:/workspace
+        shell: bash
+        run: |
+            source scripts/sanity_checks.sh

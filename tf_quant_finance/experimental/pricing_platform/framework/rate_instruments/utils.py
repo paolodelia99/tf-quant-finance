@@ -19,4 +19,4 @@ _NANO = 1e-9
 
 
 def decimal_to_double(decimal: decimal_pb2.Decimal) -> float:
-  return decimal.units + decimal.nanos * _NANO
+    return decimal.units + decimal.nanos * _NANO

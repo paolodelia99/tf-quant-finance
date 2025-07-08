@@ -23,18 +23,20 @@ from tf_quant_finance.models.hull_white.swaption import swaption_price
 from tf_quant_finance.models.hull_white.vector_hull_white import VectorHullWhiteModel
 from tf_quant_finance.models.hull_white.zero_coupon_bond_option import bond_option_price
 
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'CalibrationResult',
-    'HullWhiteModel1F',
-    'VectorHullWhiteModel',
-    'bermudan_swaption_price',
-    'bond_option_price',
-    'cap_floor_price',
-    'swaption_price',
-    'calibration_from_swaptions',
-    'calibration_from_cap_floors',
+    "CalibrationResult",
+    "HullWhiteModel1F",
+    "VectorHullWhiteModel",
+    "bermudan_swaption_price",
+    "bond_option_price",
+    "cap_floor_price",
+    "swaption_price",
+    "calibration_from_swaptions",
+    "calibration_from_cap_floors",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)

@@ -13,13 +13,16 @@
 # limitations under the License.
 """Nelson Seigel Svensson interpolation."""
 
-from tf_quant_finance.rates.nelson_seigel_svensson.nelson_seigel_svensson_interpolation import interpolate
-from tf_quant_finance.rates.nelson_seigel_svensson.nelson_seigel_svensson_interpolation import SvenssonParameters
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tf_quant_finance.rates.nelson_seigel_svensson.nelson_seigel_svensson_interpolation import (
+    interpolate,
+)
+from tf_quant_finance.rates.nelson_seigel_svensson.nelson_seigel_svensson_interpolation import (
+    SvenssonParameters,
+)
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
-_allowed_symbols = [
-    'interpolate',
-    'SvenssonParameters'
-]
+_allowed_symbols = ["interpolate", "SvenssonParameters"]
 
 remove_undocumented(__name__, _allowed_symbols)

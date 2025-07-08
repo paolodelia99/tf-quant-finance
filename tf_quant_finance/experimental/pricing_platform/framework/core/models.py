@@ -20,31 +20,32 @@ import dataclasses
 
 
 class InterestRateModelType(enum.Enum):
-  """Models for pricing interest rate derivatives.
+    """Models for pricing interest rate derivatives.
 
-  LOGNORMAL_RATE: Lognormal model for the underlying rate.
-  NORMAL_RATE: Normal model for the underlying rate
-  LOGNORMAL_SMILE_CONSISTENT_REPLICATION: Smile consistent replication
-    (lognormal vols).
-  NORMAL_SMILE_CONSISTENT_REPLICATION: Smile consistent replication
-    (normal vols).
-  HULL_WHITE_ONE_FACTOR: Hull-White single factor model of short rate.
-  """
-  LOGNORMAL_RATE = 1
+    LOGNORMAL_RATE: Lognormal model for the underlying rate.
+    NORMAL_RATE: Normal model for the underlying rate
+    LOGNORMAL_SMILE_CONSISTENT_REPLICATION: Smile consistent replication
+      (lognormal vols).
+    NORMAL_SMILE_CONSISTENT_REPLICATION: Smile consistent replication
+      (normal vols).
+    HULL_WHITE_ONE_FACTOR: Hull-White single factor model of short rate.
+    """
 
-  NORMAL_RATE = 2
+    LOGNORMAL_RATE = 1
 
-  LOGNORMAL_SMILE_CONSISTENT_REPLICATION = 3
+    NORMAL_RATE = 2
 
-  NORMAL_SMILE_CONSISTENT_REPLICATION = 4
+    LOGNORMAL_SMILE_CONSISTENT_REPLICATION = 3
 
-  HULL_WHITE_ONE_FACTOR = 5
+    NORMAL_SMILE_CONSISTENT_REPLICATION = 4
+
+    HULL_WHITE_ONE_FACTOR = 5
 
 
 @dataclasses.dataclass(frozen=True)
 class HullWhite1FactorConfig:
-  mean_reversion: Any
-  volatility: Any
+    mean_reversion: Any
+    volatility: Any
 
 
 __all__ = ["InterestRateModelType", "HullWhite1FactorConfig"]

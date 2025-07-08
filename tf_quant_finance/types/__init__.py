@@ -21,17 +21,19 @@ from tf_quant_finance.types.data_types import FloatTensor
 from tf_quant_finance.types.data_types import IntTensor
 from tf_quant_finance.types.data_types import RealTensor
 from tf_quant_finance.types.data_types import StringTensor
-from tensorflow.python.util.all_util import remove_undocumented  # pylint: disable=g-direct-tensorflow-import
+from tensorflow.python.util.all_util import (
+    remove_undocumented,
+)  # pylint: disable=g-direct-tensorflow-import
 
 _allowed_symbols = [
-    'BoolTensor',
-    'ComplexTensor',
-    'DateTensor',
-    'DoubleTensor',
-    'FloatTensor',
-    'IntTensor',
-    'RealTensor',
-    'StringTensor',
+    "BoolTensor",
+    "ComplexTensor",
+    "DateTensor",
+    "DoubleTensor",
+    "FloatTensor",
+    "IntTensor",
+    "RealTensor",
+    "StringTensor",
 ]
 
 remove_undocumented(__name__, _allowed_symbols)
