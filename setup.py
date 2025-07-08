@@ -20,7 +20,6 @@ import subprocess
 import sys
 from os import path
 from pathlib import Path
-from contextlib import chdir
 
 from setuptools import find_packages
 from setuptools import setup
@@ -31,6 +30,20 @@ if sys.version_info[0] < 3:
   # Need to load open from io to support encoding arg when using Python 2.
   from io import open  # pylint: disable=redefined-builtin, g-importing-member, g-import-not-at-top
 
+try:
+    from contextlib import chdir  # Python 3.11+
+except ImportError:
+    # Fallback for Python <3.11
+    from contextlib import contextmanager
+
+    @contextmanager
+    def chdir(path):
+        prev_cwd = os.getcwd()
+        os.chdir(path)
+        try:
+            yield
+        finally:
+            os.chdir(prev_cwd)
 
 class CompileProtos(_build_py):
     """Custom build command to compile protocol buffers."""

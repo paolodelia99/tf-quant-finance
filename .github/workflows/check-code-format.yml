@@ -1,4 +1,4 @@
-name: Build Python Wheel
+name: Check code format
 
 on:
     push:
@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Run the build process with Docker
+    - name: Run the code formatter checks
       uses: addnab/docker-run-action@v3
       with:
         image: paolodelia99/tf-quant-finance-dev:py3.12
