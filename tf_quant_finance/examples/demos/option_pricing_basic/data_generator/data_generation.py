@@ -150,6 +150,7 @@ def main(argv):
     """Generates synthetic pricing data."""
     del argv
     np.random.seed(seed=FLAGS.random_seed)
+
     def file_name_gen(output_file_prefix, i, num_files):
         return f"{output_file_prefix}_{i+1}-of-{num_files}.tfrecords"
 
@@ -173,8 +174,8 @@ def main(argv):
             options_per_file, market_data, start_instrument_id=start_id
         )
         local_path = path.join(
-            local_directory, 
-            file_name_gen(output_file_prefix, i, num_files))
+            local_directory, file_name_gen(output_file_prefix, i, num_files)
+        )
         write_local(local_path, portfolio)
         logging.info("Wrote portfolio shard to %s", local_path)
         local_paths.append(local_path)

@@ -97,11 +97,13 @@ def _week_day_mappers(weekend_mask):
           and returns an int32 `Tensor` containing ordinals for those week days.
     """
     if weekend_mask is None:
+
         def default_forward(x):
             return (x, tf.zeros_like(x, dtype=tf.bool))
-        
-        def identity(x): return x
-        
+
+        def identity(x):
+            return x
+
         return default_forward, identity
     weekend_mask = tf.convert_to_tensor(weekend_mask, dtype=tf.bool)
     weekend_mask = tf.roll(weekend_mask, -_DAYOFWEEK_0, axis=0)

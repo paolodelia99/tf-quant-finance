@@ -33,6 +33,7 @@ from tf_quant_finance import models
 from tf_quant_finance import rates
 from tf_quant_finance import types
 from tf_quant_finance import utils
+
 # We need to put some imports inside a function call below, and the function
 # call needs to come before the *actual* imports that populate the
 # tf_quant_finance namespace. Hence, we disable this lint check throughout

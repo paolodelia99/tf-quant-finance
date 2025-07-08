@@ -446,8 +446,10 @@ class SabrModel(generic_ito_process.GenericItoProcess):
                 element_shape=element_shape,
                 clear_after_read=False,
             )
+
         # Define sampling while_loop body function
-        def cond_fn(index, *args): return index < tf.size(times)
+        def cond_fn(index, *args):
+            return index < tf.size(times)
 
         # In order to use low-discrepancy random_type we need to generate the
         # sequence of independent random normals upfront. We also precompute random
