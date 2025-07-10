@@ -25,7 +25,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 
 
@@ -40,7 +40,7 @@ and the business day roll conventions. Weekends are treated as holidays.
 
 <h3 id="add_business_days"><code>add_business_days</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 add_business_days(
@@ -77,7 +77,7 @@ The resulting DateTensor.
 
 <h3 id="add_period_and_roll"><code>add_period_and_roll</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 add_period_and_roll(
@@ -106,7 +106,7 @@ The resulting DateTensor.
 
 <h3 id="business_days_between"><code>business_days_between</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 business_days_between(
@@ -136,7 +136,7 @@ corresponding pairs of dates.
 
 <h3 id="business_days_in_period"><code>business_days_in_period</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 business_days_in_period(
@@ -164,7 +164,7 @@ start at given dates.
 
 <h3 id="is_business_day"><code>is_business_day</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 is_business_day(
@@ -177,7 +177,7 @@ Returns a tensor of bools for whether given dates are business days.
 
 <h3 id="roll_to_business_day"><code>roll_to_business_day</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 roll_to_business_day(
@@ -203,7 +203,7 @@ The resulting DateTensor.
 
 <h3 id="subtract_business_days"><code>subtract_business_days</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 subtract_business_days(
@@ -240,7 +240,7 @@ The resulting DateTensor.
 
 <h3 id="subtract_period_and_roll"><code>subtract_period_and_roll</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/holiday_calendar.py">View source</a>
 
 ```python
 subtract_period_and_roll(

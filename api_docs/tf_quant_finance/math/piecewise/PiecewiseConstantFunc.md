@@ -24,7 +24,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
 
 
 
@@ -75,7 +75,7 @@ tf_quant_finance.math.piecewise.PiecewiseConstantFunc(
 
 <h3 id="__call__"><code>__call__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
 
 ```python
 __call__(
@@ -114,7 +114,7 @@ piecewise constant function.
 
 <h3 id="dtype"><code>dtype</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
 
 ```python
 dtype()
@@ -125,7 +125,7 @@ The underlying data type.
 
 <h3 id="integrate"><code>integrate</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
 
 ```python
 integrate(
@@ -159,7 +159,7 @@ integral of the piecewise constant function between `[x1, x2]`.
 
 <h3 id="jump_locations"><code>jump_locations</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
 
 ```python
 jump_locations()
@@ -170,7 +170,7 @@ The jump locations of the piecewise constant function.
 
 <h3 id="name"><code>name</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
 
 ```python
 name()
@@ -181,7 +181,7 @@ The name to give to the ops created by this class.
 
 <h3 id="values"><code>values</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/piecewise.py">View source</a>
 
 ```python
 values()

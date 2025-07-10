@@ -19,7 +19,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/schedules.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/schedules.py">View source</a>
 
 
 
@@ -48,7 +48,7 @@ tf_quant_finance.datetime.BusinessDaySchedule(
 
 <h3 id="dates"><code>dates</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/schedules.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/schedules.py">View source</a>
 
 ```python
 dates()

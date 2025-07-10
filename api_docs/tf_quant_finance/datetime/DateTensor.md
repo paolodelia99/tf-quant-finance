@@ -48,7 +48,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 
 
@@ -85,7 +85,7 @@ tf_quant_finance.datetime.DateTensor(
 
 <h3 id="__add__"><code>__add__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __add__(
@@ -123,7 +123,7 @@ new_dates = dates + tff.datetime.month([1, 2])
 
 <h3 id="__eq__"><code>__eq__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __eq__(
@@ -136,7 +136,7 @@ Compares two DateTensors by "==", returning a Tensor of bools.
 
 <h3 id="__ge__"><code>__ge__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __ge__(
@@ -149,7 +149,7 @@ Compares two DateTensors by ">=", returning a Tensor of bools.
 
 <h3 id="__getitem__"><code>__getitem__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 __getitem__(
@@ -162,7 +162,7 @@ Implements indexing.
 
 <h3 id="__gt__"><code>__gt__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __gt__(
@@ -175,7 +175,7 @@ Compares two DateTensors by ">", returning a Tensor of bools.
 
 <h3 id="__le__"><code>__le__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __le__(
@@ -188,7 +188,7 @@ Compares two DateTensors by "<=", returning a Tensor of bools.
 
 <h3 id="__lt__"><code>__lt__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __lt__(
@@ -201,7 +201,7 @@ Compares two DateTensors by "<", returning a Tensor of bools.
 
 <h3 id="__ne__"><code>__ne__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __ne__(
@@ -214,7 +214,7 @@ Compares two DateTensors by "!=", returning a Tensor of bools.
 
 <h3 id="__sub__"><code>__sub__</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 __sub__(
@@ -241,7 +241,7 @@ The new instance of DateTensor.
 
 <h3 id="boolean_mask"><code>boolean_mask</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 boolean_mask(
@@ -254,7 +254,7 @@ See tf.boolean_mask.
 
 <h3 id="broadcast_to"><code>broadcast_to</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 broadcast_to(
@@ -267,7 +267,7 @@ See tf.broadcast_to.
 
 <h3 id="concat"><code>concat</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 @classmethod
@@ -281,7 +281,7 @@ See tf.concat.
 
 <h3 id="day"><code>day</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 day()
@@ -300,7 +300,7 @@ dates.day()  # [25, 2]
 
 <h3 id="day_of_week"><code>day_of_week</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 day_of_week()
@@ -320,7 +320,7 @@ dates.day_of_week()  # [5, 1]
 
 <h3 id="day_of_year"><code>day_of_year</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 day_of_year()
@@ -344,7 +344,7 @@ dt.day_of_year()  # [25, 62]
 
 <h3 id="days_until"><code>days_until</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 days_until(
@@ -380,7 +380,7 @@ dates.days_until(targets)  # [11, 3]
 
 <h3 id="expand_dims"><code>expand_dims</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 expand_dims(
@@ -393,7 +393,7 @@ See tf.expand_dims.
 
 <h3 id="identity"><code>identity</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 identity()
@@ -404,7 +404,7 @@ See tf.identity.
 
 <h3 id="is_end_of_month"><code>is_end_of_month</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 is_end_of_month()
@@ -415,7 +415,7 @@ Returns a bool Tensor indicating whether dates are at ends of months.
 
 <h3 id="month"><code>month</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 month()
@@ -432,7 +432,7 @@ dates.month()  # [1, 3]
 
 <h3 id="ordinal"><code>ordinal</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 ordinal()
@@ -451,7 +451,7 @@ dates.ordinal()  # [737143, 1]
 
 <h3 id="period_length_in_days"><code>period_length_in_days</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 period_length_in_days(
@@ -485,7 +485,7 @@ dates.period_length_in_days(periods)  # [29, 61]
 
 <h3 id="reshape"><code>reshape</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 reshape(
@@ -498,7 +498,7 @@ See tf.reshape.
 
 <h3 id="squeeze"><code>squeeze</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 squeeze(
@@ -511,7 +511,7 @@ See tf.squeeze.
 
 <h3 id="stack"><code>stack</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 @classmethod
@@ -525,7 +525,7 @@ See tf.stack.
 
 <h3 id="to_end_of_month"><code>to_end_of_month</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 to_end_of_month()
@@ -536,7 +536,7 @@ Returns a new DateTensor with each date shifted to the end of month.
 
 <h3 id="to_tensor"><code>to_tensor</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 to_tensor()
@@ -566,7 +566,7 @@ dates.to_tensor()  # tf.Tensor with contents [[2019, 1, 25], [2020, 3, 2]].
 
 <h3 id="transpose"><code>transpose</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 transpose(
@@ -579,7 +579,7 @@ See tf.transpose.
 
 <h3 id="where"><code>where</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 @classmethod
@@ -593,7 +593,7 @@ See tf.where. Only three-argument version is supported here.
 
 <h3 id="year"><code>year</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/date_tensor.py">View source</a>
 
 ```python
 year()

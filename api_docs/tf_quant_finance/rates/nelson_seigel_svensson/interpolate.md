@@ -17,7 +17,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/rates/nelson_seigel_svensson/nelson_seigel_svensson_interpolation.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/rates/nelson_seigel_svensson/nelson_seigel_svensson_interpolation.py">View source</a>
 
 
 

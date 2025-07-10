@@ -97,7 +97,7 @@ We are working on expanding the coverage of the library. Areas under active deve
 
 ## Examples
 
-See [`tf_quant_finance/examples/`](https://github.com/google/tf-quant-finance/tree/master/tf_quant_finance/examples)
+See [`tf_quant_finance/examples/`](https://github.com/paolodelia99/tf-quant-finance/tree/master/tf_quant_finance/examples)
 for end-to-end examples. It includes tutorial notebooks such as:
 
   *   [American Option pricing under the Black-Scholes model](https://colab.research.google.com/github/google/tf-quant-finance/blob/master/tf_quant_finance/examples/jupyter_notebooks/American_Option_Black_Scholes.ipynb)
@@ -145,7 +145,7 @@ pip3 install --upgrade tf-nightly tensorflow-probability==0.12.1 numpy==1.21 att
 Clone the GitHub repository:
 
 ```sh
-git clone https://github.com/google/tf-quant-finance.git
+git clone https://github.com/paolodelia99/tf-quant-finance.git
 ```
 
 After you run
@@ -161,7 +161,7 @@ source scripts/run_tests.sh
 ```
 
 will run tests in
-[sobol_test.py](https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/math/random_ops/sobol/sobol_test.py)
+[sobol_test.py](https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/random_ops/sobol/sobol_test.py)
 .
 
 Tests run using Python version 3. Please make sure that you can
@@ -173,7 +173,7 @@ The following commands will build custom pip package from source and install it:
 
 ```sh
 # sudo apt-get install bazel git python python-pip rsync # For Ubuntu.
-git clone https://github.com/google/tf-quant-finance.git
+git clone https://github.com/paolodelia99/tf-quant-finance.git
 cd tf-quant-finance
 source scripts/build_wheel.sh # scripts/build_wheel.ps1 if you are on windows
 pip install --user --upgrade dist/*.whl
@@ -181,7 +181,7 @@ pip install --user --upgrade dist/*.whl
 
 ## Community
 
-1. [GitHub repository](https://github.com/google/tf-quant-finance): Report bugs or make feature requests.
+1. [GitHub repository](https://github.com/paolodelia99/tf-quant-finance): Report bugs or make feature requests.
 
 2. [TensorFlow Blog](https://blog.tensorflow.org/): Stay up to date on content from the TensorFlow team and best articles from the community.
 

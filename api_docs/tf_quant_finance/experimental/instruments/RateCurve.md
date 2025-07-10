@@ -21,7 +21,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
 
 
 
@@ -77,7 +77,7 @@ tf_quant_finance.experimental.instruments.RateCurve(
 
 <h3 id="get_discount_factor"><code>get_discount_factor</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
 
 ```python
 get_discount_factor(
@@ -90,7 +90,7 @@ Returns discount factors at `interpolation_dates`.
 
 <h3 id="get_forward_rate"><code>get_forward_rate</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
 
 ```python
 get_forward_rate(
@@ -125,7 +125,7 @@ forward rate.
 
 <h3 id="get_rates"><code>get_rates</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/rate_curve.py">View source</a>
 
 ```python
 get_rates(

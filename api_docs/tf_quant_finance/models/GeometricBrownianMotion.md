@@ -28,7 +28,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 
 
@@ -105,7 +105,7 @@ samples_custom = process.sample_paths(
 
 <h3 id="dim"><code>dim</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 dim()
@@ -116,7 +116,7 @@ The dimension of the process.
 
 <h3 id="drift_fn"><code>drift_fn</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 drift_fn()
@@ -127,7 +127,7 @@ Python callable calculating instantaneous drift.
 
 <h3 id="drift_is_constant"><code>drift_is_constant</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 drift_is_constant()
@@ -138,7 +138,7 @@ Returns True if the drift of the process is a constant.
 
 <h3 id="dtype"><code>dtype</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 dtype()
@@ -149,7 +149,7 @@ The data type of process realizations.
 
 <h3 id="fd_solver_backward"><code>fd_solver_backward</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 fd_solver_backward(
@@ -294,7 +294,7 @@ A tuple object containing at least the following attributes:
 
 <h3 id="fd_solver_forward"><code>fd_solver_forward</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 fd_solver_forward(
@@ -433,7 +433,7 @@ A tuple object containing at least the following attributes:
 
 <h3 id="name"><code>name</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 name()
@@ -444,7 +444,7 @@ The name to give to ops created by this class.
 
 <h3 id="sample_paths"><code>sample_paths</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 sample_paths(
@@ -515,7 +515,7 @@ broadcastable to `[num_samples, num_time_points, 1]`.
 
 <h3 id="volatility_fn"><code>volatility_fn</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 volatility_fn()
@@ -526,7 +526,7 @@ Python callable calculating the instantaneous volatility.
 
 <h3 id="volatility_is_constant"><code>volatility_is_constant</code></h3>
 
-<a target="_blank" href="https://github.com/google/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/geometric_brownian_motion/univariate_geometric_brownian_motion.py">View source</a>
 
 ```python
 volatility_is_constant()

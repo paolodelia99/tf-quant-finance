@@ -13,7 +13,7 @@ header-includes: |
 ...
 
 This doc describes an implementation of the
-[ProcessedMarketData](https://github.com/google/tf-quant-finance/blob/459f6ffabb85ba45088d826291b3c75d263e706a/tf_quant_finance/experimental/pricing_platform/framework/core/processed_market_data.py#L212)
+[ProcessedMarketData](https://github.com/paolodelia99/tf-quant-finance/blob/459f6ffabb85ba45088d826291b3c75d263e706a/tf_quant_finance/experimental/pricing_platform/framework/core/processed_market_data.py#L212)
 interface where the supplied data is represented as a dictionary of numeric
 values.
 
@@ -135,17 +135,17 @@ Below we specify rates and equity classes specifications.
 
 *   `curves` should contain a dictionary of curve specification that are needed
     for pricing. Available keys are the proto name fields of
-    [`RateIndexType`](https://github.com/google/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/rate_indices.proto#L31).
+    [`RateIndexType`](https://github.com/paolodelia99/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/rate_indices.proto#L31).
     Additionally, `risk_free_curve` should be supplied, which is the default
     discounting curve. Curves are represented via discount factors and
     corresponding `dates` (**TODO: add relatives dates `rdates` alternative**).
     In order to add a missing curve type, simply add it as a new field in
-    [`RateIndexType`](https://github.com/google/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/rate_indices.proto#L31)
+    [`RateIndexType`](https://github.com/paolodelia99/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/rate_indices.proto#L31)
 
 *   Fixings can be supplied for each curve using `fixing_rates`, `fixing_dates`,
     and `fixing_daycount` fields (available day count conventions are listed in
     the
-    [`DayCountConvention`](https://github.com/google/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/daycount_conventions.proto#L22)
+    [`DayCountConvention`](https://github.com/paolodelia99/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/daycount_conventions.proto#L22)
     proto). If the fields are not supplied, fixings are assumed to be equal to
     zero. Otherwise, fixings are treated as a piecewise constant function for
     the dates that are not supplied with `fixing_dates`
@@ -183,13 +183,13 @@ curve_config = {"interpolation_method": "LINEAR",
 ```
 
 where `interpolation_method` is one of the supported
-[methods](https://github.com/google/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/framework/core/interpolation_method.py#L20),
+[methods](https://github.com/paolodelia99/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/framework/core/interpolation_method.py#L20),
 `interpolate_rates` is a boolean that specifies whether the interpolation is
 performed in a rates or discount factor space, `daycount_convention` is one of
 the supported
-[conventions](https://github.com/google/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/daycount_conventions.proto#L22),
-`business_convention` is one of [BusinessDayConvention](https://github.com/google/tf-quant-finance/blob/53bb1edc345855f625b392ff5831aeadec04c3ff/tf_quant_finance/experimental/pricing_platform/instrument_protos/business_days.proto#L22),
-and `holiday_calendar` is a [BankHoliday](https://github.com/google/tf-quant-finance/blob/53bb1edc345855f625b392ff5831aeadec04c3ff/tf_quant_finance/experimental/pricing_platform/instrument_protos/business_days.proto#L52).
+[conventions](https://github.com/paolodelia99/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/instrument_protos/daycount_conventions.proto#L22),
+`business_convention` is one of [BusinessDayConvention](https://github.com/paolodelia99/tf-quant-finance/blob/53bb1edc345855f625b392ff5831aeadec04c3ff/tf_quant_finance/experimental/pricing_platform/instrument_protos/business_days.proto#L22),
+and `holiday_calendar` is a [BankHoliday](https://github.com/paolodelia99/tf-quant-finance/blob/53bb1edc345855f625b392ff5831aeadec04c3ff/tf_quant_finance/experimental/pricing_platform/instrument_protos/business_days.proto#L52).
 
 By default cubic interpolation is used in the discount factor space with
 `ACTUAL_365` day count convention.
@@ -242,7 +242,7 @@ height=4em, below of=price_1, node distance=2.5cm, right=0cm](aggregate) {aggreg
 Here market data is evolved twice and the pricing is performed at each stage.
 Fixings can either be a part of the market data or supplied separately via
 pricing
-[`config`](https://github.com/google/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/framework/core/instrument.py#L58).
+[`config`](https://github.com/paolodelia99/tf-quant-finance/blob/ad8bf1ab3a834f09dab1211720c7d0eb796bd816/tf_quant_finance/experimental/pricing_platform/framework/core/instrument.py#L58).
 For example, `config` may contain a knock-out event for a barrier option.
 Metadata is used by the pricing method via the configuration field
 

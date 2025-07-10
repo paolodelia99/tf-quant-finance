@@ -98,7 +98,7 @@ patch_version = '1'
 if '--nightly' in sys.argv:
   # Run `python3 setup.py --nightly ...` to create a nightly build.
   sys.argv.remove('--nightly')
-  project_name = 'tf-q-finance-nightly'
+  project_name = 'tff_nightly'
   release_suffix = datetime.datetime.utcnow().strftime('.dev%Y%m%d')
 else:
   project_name = 'tf-q-finance'

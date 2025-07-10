@@ -14,7 +14,7 @@
 """Implementation of processed market data interface.
 
 Market data is expected to be in a specific format. See details in
-https://github.com/google/tf-quant-finance/tree/master/tf_quant_finance/experimental/pricing_platform/framework/market_data/market_data.pdf
+https://github.com/paolodelia99/tf-quant-finance/tree/master/tf_quant_finance/experimental/pricing_platform/framework/market_data/market_data.pdf
 
 
 {
@@ -144,7 +144,7 @@ class MarketDataDict(pmd.ProcessedMarketData):
         """Market data constructor.
 
         The dictionary must follow a format outlined in the doc:
-        https://github.com/google/tf-quant-finance/tree/master/tf_quant_finance/experimental/pricing_platform/framework/market_data/market_data.pdf
+        https://github.com/paolodelia99/tf-quant-finance/tree/master/tf_quant_finance/experimental/pricing_platform/framework/market_data/market_data.pdf
 
         Args:
           market_data_dict: Market data dictionary.

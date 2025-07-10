@@ -38,8 +38,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/google/tf-quant-finance"
-Repository = "https://github.com/google/tf-quant-finance"
+Homepage = "https://github.com/paolodelia99/tf-quant-finance"
+Repository = "https://github.com/paolodelia99/tf-quant-finance"
 
 [tool.setuptools.packages.find]
 include = ["tf_quant_finance*"]

@@ -27,3 +27,7 @@ then install the library itself:
 [`types`](./types.md) module: Types module.
 
 [`utils`](./utils.md) module: Utilities module.
+
+## Examples
+
+For practical usage and demonstrations, please see the [examples folder in the repository](https://github.com/paolodelia99/tf-quant-finance/tree/main/tf_quant_finance/examples). It contains Jupyter notebooks and scripts showcasing various features and use cases of TensorFlow Quantitative Finance.
