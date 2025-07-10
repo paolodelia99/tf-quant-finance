@@ -51,7 +51,7 @@ the [TensorFlow installation instructions](https://tensorflow.org/install).
 For example, you could install TensorFlow
 
 ```sh
-pip3 install --upgrade tensorflow
+pip3 install --upgrade tensorflow tf_keras
 ```
 
 Then run
