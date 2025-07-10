@@ -1,0 +1,25 @@
+format: jb-book
+root: index
+parts:
+  - caption: Black Scholes
+    chapters:
+      - file: black_scholes
+  - caption: Datetime
+    chapters:
+      - file: datetime
+  - caption: math
+    chapters:
+      - file: math
+  - caption: Models
+    chapters:
+      - file: models
+  - caption: Rates
+    chapters:
+      - file: rates
+  - caption: Types
+    chapters:
+      - file: types
+  - caption: Utils
+    chapters:
+      - file: utils
+  
