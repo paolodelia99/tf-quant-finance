@@ -1,4 +1,4 @@
-name: deploy-book
+name: deploy-docs
 
 # Run this when the master or main branch changes
 on:
@@ -42,7 +42,7 @@ jobs:
     #    key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
 
     # Build the book
-    - name: Build the book
+    - name: Build the docs
       run: |
         jupyter-book build api_docs/tf_quant_finance
 
@@ -50,7 +50,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: "_build/html"
+        path: "api_docs/tf_quant_finance/_build/html"
 
     # Deploy the book's HTML to GitHub Pages
     - name: Deploy to GitHub Pages
