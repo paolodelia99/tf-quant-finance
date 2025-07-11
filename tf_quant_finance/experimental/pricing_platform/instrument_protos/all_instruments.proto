@@ -17,10 +17,10 @@ syntax = "proto3";
 
 package tf_quant_finance.experimental.pricing_platform.instrument_protos;
 
-import "american_equity_option.proto";
-import "interest_rate_swap.proto";
-import "forward_rate_agreement.proto";
-import "swaption.proto";
+import "tf_quant_finance/experimental/pricing_platform/instrument_protos/american_equity_option.proto";
+import "tf_quant_finance/experimental/pricing_platform/instrument_protos/interest_rate_swap.proto";
+import "tf_quant_finance/experimental/pricing_platform/instrument_protos/forward_rate_agreement.proto";
+import "tf_quant_finance/experimental/pricing_platform/instrument_protos/swaption.proto";
 
 // Proto for the supported instruments.
 message Instrument {
