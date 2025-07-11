@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Run the code formatter checks
+    - name: Run the tests
       uses: addnab/docker-run-action@v3
       with:
         image: paolodelia99/tf-quant-finance-dev:py3.12
