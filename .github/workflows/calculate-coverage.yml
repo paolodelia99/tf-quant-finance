@@ -1,9 +1,10 @@
-name: Run Tests
+name: Run Tests & Calculate Coverage
 
 on:
     push:
-      branches-ignore:
-      - main
+        branches: [ "main" ]
+    pull_request:
+        branches: [ "main" ]
 
 jobs:
   build:
@@ -19,4 +20,10 @@ jobs:
         options: -v ${{ github.workspace }}:/workspace
         shell: bash
         run: |
-            source scripts/run_tests.sh
+            source scripts/run_tests.sh --cov
+    
+    - name: Upload coverage to Coveralls
+      uses: coverallsapp/github-action@v2
+      with:
+        format: cobertura
+        file: coverage.xml

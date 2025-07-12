@@ -1,9 +1,8 @@
-name: Run Tests
+name: Check code format
 
 on:
     push:
-      branches-ignore:
-      - main
+        branches: [ "*" ]
 
 jobs:
   build:
@@ -12,11 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Run the tests
+    - name: Run the code formatter checks
       uses: addnab/docker-run-action@v3
       with:
         image: paolodelia99/tf-quant-finance-dev:py3.12
         options: -v ${{ github.workspace }}:/workspace
         shell: bash
         run: |
-            source scripts/run_tests.sh
+            source scripts/security_audits.sh
