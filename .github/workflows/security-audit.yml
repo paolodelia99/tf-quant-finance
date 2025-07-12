@@ -1,4 +1,4 @@
-name: Check code format
+name: Security audits
 
 on:
     push:
@@ -18,4 +18,4 @@ jobs:
         options: -v ${{ github.workspace }}:/workspace
         shell: bash
         run: |
-            source scripts/security_audits.sh
+            source scripts/security_audit.sh
