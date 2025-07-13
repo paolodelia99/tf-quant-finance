@@ -8,7 +8,7 @@ while [[ "$#" -gt 0 ]]; do
     case $1 in
         -cov|--coverage)
             COVERAGE="TRUE"
-            shift 2
+            shift
             ;;
         -*|--*)
             echo "Unknown parameter passed: $1"
@@ -17,6 +17,7 @@ while [[ "$#" -gt 0 ]]; do
         *)
             POSITIONAL_ARGS+=("$1")
             shift
+            ;;
     esac
 done
 
