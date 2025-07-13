@@ -1,8 +1,14 @@
 # Set the base directory and source the virtual environment creation script
 . "$PSScriptRoot/create_venv.ps1"
 
-# Test suites to run
-$tests = @("tests/black_scholes", "tests/datetime", "tests/utils" "tests/experimental")
+# Collect all arguments except script name
+$extraArgs = $args
 
 Write-Host "Running tff tests"
-pytest -no-header -vv $tests
+
+if ($extraArgs -contains '--cov') {
+    coverage run --source=tf_quant_finance -m pytest --no-header -vv
+    coverage report -m
+} else {
+    pytest --no-header -vv
+}
