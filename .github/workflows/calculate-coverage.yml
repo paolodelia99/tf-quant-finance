@@ -16,7 +16,7 @@ jobs:
     - name: Run the tests and collect coverage
       uses: addnab/docker-run-action@v3
       with:
-        image: paolodelia99/tf-quant-finance-dev:py3.12
+        image: paolodelia99/tf-quant-finance-dev:py3.10
         options: -v ${{ github.workspace }}:/workspace
         shell: bash
         run: |
