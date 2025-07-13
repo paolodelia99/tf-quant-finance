@@ -17,16 +17,15 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     python3-venv \
     python-is-python3 \
     git \
-    protobuf-compiler \
-    libprotobuf-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Protoc Compiler from zip
 RUN cd tmp \
     && curl -LO ${PB_REL}/download/v${PB_VERSION}/protoc-${PB_VERSION}-linux-x86_64.zip \
-    && unzip protoc-${PB_VERSION}-linux-x86_64.zip -d $HOME/.local \
+    && unzip protoc-${PB_VERSION}-linux-x86_64.zip -d /usr/local \
     && rm protoc-${PB_VERSION}-linux-x86_64.zip
-RUN export PATH="$PATH:$HOME/.local/bin"
+
+ENV PATH="/usr/local/bin:${PATH}"
 
 # Change work directory
 WORKDIR /workspace

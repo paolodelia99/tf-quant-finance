@@ -26,19 +26,20 @@ source "$(dirname "${BASH_SOURCE[0]}")/create_venv.sh"
 
 pip install pytest
 
-# Test suites to run
+# Compile protos files
 echo "Compiling proto files!"
 protoc --python_out=. --proto_path=. tf_quant_finance/experimental/pricing_platform/instrument_protos/*.proto
+echo "Generated proto files"
+ls -ld tf_quant_finance/experimental/pricing_platform/instrument_protos/*.proto
 
-echo "Running tff tests"
 
-# Collect all arguments except script name
-extra_args=("${@:1}")
-
+# Run tests
 if [[ $COVERAGE = "TRUE" ]]; then
     pip install coverage
+    echo "Running tff tests with Coverage"
     coverage run --source=tf_quant_finance -m pytest --no-header -vv
     coverage xml
 else
-  pytest --no-header -vv
+    echo "Running tff tests"
+    pytest --no-header -vv
 fi
