@@ -29,7 +29,7 @@ pip install pytest
 # Compile protos files
 echo "Compiling proto files!"
 protoc --python_out=. --proto_path=. tf_quant_finance/experimental/pricing_platform/instrument_protos/*.proto
-echo "Generated proto files"
+echo "Generated proto files: "
 ls -ld tf_quant_finance/experimental/pricing_platform/instrument_protos/*.proto
 
 

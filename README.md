@@ -1,5 +1,12 @@
 # TF Quant Finance: TensorFlow based Quant Finance Library
 
+<div align="center">
+
+[![Coverage Status](https://coveralls.io/repos/github/paolodelia99/tf-quant-finance/badge.svg?branch=main)](https://coveralls.io/github/paolodelia99/tf-quant-finance?branch=main)
+[![Black formatting](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+</div>
+
 **Making [TF Quant Finance](https://github.com/google/tf-quant-finance) working again**: since the official repo has not been mantained for year and achieved, the following fork is making this library alive again. Feel free to contribute to the library fixing bugs and implementing new features.
 
 ## Table of contents
