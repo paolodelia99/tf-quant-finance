@@ -168,7 +168,7 @@ source scripts/run_tests.sh
 ```
 
 will run tests in
-[sobol_test.py](https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/random_ops/sobol/sobol_test.py)
+[sobol_test.py](https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/math/random_ops/sobol/sobol_test.py)
 .
 
 Tests run using Python version 3. Please make sure that you can

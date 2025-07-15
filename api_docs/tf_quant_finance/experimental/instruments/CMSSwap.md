@@ -21,7 +21,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/cms_swap.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/instruments/cms_swap.py">View source</a>
 
 
 
@@ -170,7 +170,7 @@ price = cms.price(valuation_date, market)
 
 <h3 id="annuity"><code>annuity</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/interest_rate_swap.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/instruments/interest_rate_swap.py">View source</a>
 
 ```python
 annuity(
@@ -183,7 +183,7 @@ Returns the annuity of each swap on the vauation date.
 
 <h3 id="par_rate"><code>par_rate</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/interest_rate_swap.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/instruments/interest_rate_swap.py">View source</a>
 
 ```python
 par_rate(
@@ -196,7 +196,7 @@ Returns the par swap rate for the swap.
 
 <h3 id="price"><code>price</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/cms_swap.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/instruments/cms_swap.py">View source</a>
 
 ```python
 price(

@@ -25,7 +25,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 
 
@@ -56,7 +56,7 @@ see <a href="../../tf_quant_finance/models/GenericItoProcess.md"><code>models.Ge
 
 <h3 id="dim"><code>dim</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 dim()
@@ -67,7 +67,7 @@ The dimension of the process. A positive python integer.
 
 <h3 id="drift_fn"><code>drift_fn</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 drift_fn()
@@ -89,7 +89,7 @@ The instantaneous drift rate callable.
 
 <h3 id="dtype"><code>dtype</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 dtype()
@@ -100,7 +100,7 @@ The data type of process realizations.
 
 <h3 id="fd_solver_backward"><code>fd_solver_backward</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 fd_solver_backward(
@@ -263,7 +263,7 @@ A tuple object containing at least the following attributes:
 
 <h3 id="fd_solver_forward"><code>fd_solver_forward</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 fd_solver_forward(
@@ -409,7 +409,7 @@ A tuple object containing at least the following attributes:
 
 <h3 id="name"><code>name</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 name()
@@ -420,7 +420,7 @@ The name to give to ops created by this class.
 
 <h3 id="sample_paths"><code>sample_paths</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 sample_paths(
@@ -469,7 +469,7 @@ is the batch dimensions of the ItoProcess.
 
 <h3 id="volatility_fn"><code>volatility_fn</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/models/ito_process.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/models/ito_process.py">View source</a>
 
 ```python
 volatility_fn()

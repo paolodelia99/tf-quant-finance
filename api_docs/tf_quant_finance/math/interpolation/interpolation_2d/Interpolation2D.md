@@ -19,7 +19,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/interpolation/interpolation_2d/interpolation_2d.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/math/interpolation/interpolation_2d/interpolation_2d.py">View source</a>
 
 
 
@@ -98,7 +98,7 @@ interpolated_values = interpolator.interpolate(times, strikes)
 
 <h3 id="interpolate"><code>interpolate</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/math/interpolation/interpolation_2d/interpolation_2d.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/math/interpolation/interpolation_2d/interpolation_2d.py">View source</a>
 
 ```python
 interpolate(

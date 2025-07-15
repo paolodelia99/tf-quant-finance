@@ -40,10 +40,10 @@ Licensed under the Apache License, Version 2.0 (the "License");
 
 <table class="tfo-notebook-buttons" align="left">
   <td>
-    <a target="_blank" href="https://www.google.com/url?q=https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/examples/jupyter_notebooks/Black_Scholes_Price_and_Implied_Vol.ipynb"><img src="https://www.tensorflow.org/images/colab_logo_32px.png" />Run in Google Colab</a>
+    <a target="_blank" href="https://www.google.com/url?q=https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/examples/jupyter_notebooks/Black_Scholes_Price_and_Implied_Vol.ipynb"><img src="https://www.tensorflow.org/images/colab_logo_32px.png" />Run in Google Colab</a>
   </td>
   <td>
-    <a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/examples/jupyter_notebooks/Black_Scholes_Price_and_Implied_Vol.ipynb"><img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />View source on GitHub</a>
+    <a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/examples/jupyter_notebooks/Black_Scholes_Price_and_Implied_Vol.ipynb"><img src="https://www.tensorflow.org/images/GitHub-Mark-32px.png" />View source on GitHub</a>
   </td>
 </table>
 

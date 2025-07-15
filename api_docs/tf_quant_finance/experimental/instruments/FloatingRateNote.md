@@ -19,7 +19,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/floating_rate_note.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/instruments/floating_rate_note.py">View source</a>
 
 
 
@@ -146,7 +146,7 @@ price = frn.price(valuation_date, market)
 
 <h3 id="price"><code>price</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/instruments/floating_rate_note.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/instruments/floating_rate_note.py">View source</a>
 
 ```python
 price(

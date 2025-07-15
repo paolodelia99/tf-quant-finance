@@ -34,7 +34,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
 
 
 
@@ -71,7 +71,7 @@ tf_quant_finance.datetime.PeriodTensor(
 
 <h3 id="__add__"><code>__add__</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
 
 ```python
 __add__(
@@ -84,7 +84,7 @@ Adds another PeriodTensor of the same type.
 
 <h3 id="__getitem__"><code>__getitem__</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 __getitem__(
@@ -97,7 +97,7 @@ Implements indexing.
 
 <h3 id="__mul__"><code>__mul__</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
 
 ```python
 __mul__(
@@ -110,7 +110,7 @@ Multiplies PeriodTensor by a Tensor of ints.
 
 <h3 id="__sub__"><code>__sub__</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
 
 ```python
 __sub__(
@@ -123,7 +123,7 @@ Subtracts another PeriodTensor of the same type.
 
 <h3 id="boolean_mask"><code>boolean_mask</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 boolean_mask(
@@ -136,7 +136,7 @@ See tf.boolean_mask.
 
 <h3 id="broadcast_to"><code>broadcast_to</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 broadcast_to(
@@ -149,7 +149,7 @@ See tf.broadcast_to.
 
 <h3 id="concat"><code>concat</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 @classmethod
@@ -163,7 +163,7 @@ See tf.concat.
 
 <h3 id="expand_dims"><code>expand_dims</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 expand_dims(
@@ -176,7 +176,7 @@ See tf.expand_dims.
 
 <h3 id="identity"><code>identity</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 identity()
@@ -187,7 +187,7 @@ See tf.identity.
 
 <h3 id="period_type"><code>period_type</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
 
 ```python
 period_type()
@@ -198,7 +198,7 @@ Returns the PeriodType of this PeriodTensor.
 
 <h3 id="quantity"><code>quantity</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/periods/period_tensors.py">View source</a>
 
 ```python
 quantity()
@@ -209,7 +209,7 @@ Returns the quantities tensor of this PeriodTensor.
 
 <h3 id="reshape"><code>reshape</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 reshape(
@@ -222,7 +222,7 @@ See tf.reshape.
 
 <h3 id="squeeze"><code>squeeze</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 squeeze(
@@ -235,7 +235,7 @@ See tf.squeeze.
 
 <h3 id="stack"><code>stack</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 @classmethod
@@ -249,7 +249,7 @@ See tf.stack.
 
 <h3 id="transpose"><code>transpose</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 transpose(
@@ -262,7 +262,7 @@ See tf.transpose.
 
 <h3 id="where"><code>where</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/datetime/tensor_wrapper.py">View source</a>
 
 ```python
 @classmethod

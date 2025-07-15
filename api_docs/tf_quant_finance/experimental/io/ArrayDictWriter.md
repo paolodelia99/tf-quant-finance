@@ -23,7 +23,7 @@ For open-source contributions the docs will be updated automatically.
 <table class="tfo-notebook-buttons tfo-api" align="left">
 </table>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/io.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/io.py">View source</a>
 
 
 
@@ -84,7 +84,7 @@ read the file, use the `ArrayDictReader` class.
 
 <h3 id="__enter__"><code>__enter__</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/io.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/io.py">View source</a>
 
 ```python
 __enter__()
@@ -95,7 +95,7 @@ __enter__()
 
 <h3 id="__exit__"><code>__exit__</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/io.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/io.py">View source</a>
 
 ```python
 __exit__(
@@ -108,7 +108,7 @@ Exits a `with` block and closes the file.
 
 <h3 id="close"><code>close</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/io.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/io.py">View source</a>
 
 ```python
 close()
@@ -119,7 +119,7 @@ Close the file.
 
 <h3 id="flush"><code>flush</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/io.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/io.py">View source</a>
 
 ```python
 flush()
@@ -130,7 +130,7 @@ Flushes the file.
 
 <h3 id="write"><code>write</code></h3>
 
-<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/master/tf_quant_finance/experimental/io.py">View source</a>
+<a target="_blank" href="https://github.com/paolodelia99/tf-quant-finance/blob/main/tf_quant_finance/experimental/io.py">View source</a>
 
 ```python
 write(
