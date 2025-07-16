@@ -1,0 +1,80 @@
+name: Create new Tag on PR merge
+
+on:
+  pull_request:
+    types:
+      - closed 
+
+jobs:
+  tag:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    outputs:
+      new_tag : ${{ steps.version.outputs.new_tag }}
+      skip: ${{ steps.version.outputs.skip }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Git
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions"
+
+      - name: Determine next version tag
+        id: version
+        run: |
+          LABELS="${{ toJson(github.event.pull_request.labels) }}"
+          
+          echo "PR Labels: $LABELS"
+          
+          # Extract the appropriate label
+          if echo "$LABELS" | grep -qE "patch|hotfix"; then
+            BUMP="patch"
+          elif echo "$LABELS" | grep -qE "minor|feature"; then
+            BUMP="minor"
+          elif echo "$LABELS" | grep -q "major"; then
+            BUMP="major"
+          else
+            echo "No release label found. Exiting."
+            echo "skip=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          
+          # Fetch tags and find latest
+          git fetch --tags
+          TAG=$(git describe --tags --abbrev=0)
+          
+          echo "Latest tag: $TAG"
+          if [ -z "$TAG" ]; then
+            TAG="v0.0.0"
+          fi
+          
+          # Split version
+          IFS='.' read -r -a parts <<< "${TAG#v}"
+          major=${parts[0]}
+          minor=${parts[1]}
+          patch=${parts[2]}
+
+          # Bump version
+          if [ "$BUMP" == "major" ]; then
+            major=$((major + 1))
+            minor=0
+            patch=0
+          elif [ "$BUMP" == "minor" ]; then
+            minor=$((minor + 1))
+            patch=0
+          elif [ "$BUMP" == "patch" ]; then
+            patch=$((patch + 1))
+          fi
+
+          NEW_TAG="v$major.$minor.$patch"
+          echo "New tag: $NEW_TAG"
+          echo "new_tag=$NEW_TAG" >> $GITHUB_OUTPUT
+
+      - name: Create and push new tag
+        if: steps.version.outputs.skip != 'true'
+        run: |
+          git tag ${{ steps.version.outputs.new_tag }}
+          git push origin ${{ steps.version.outputs.new_tag }}
